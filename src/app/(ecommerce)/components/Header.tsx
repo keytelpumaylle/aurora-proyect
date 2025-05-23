@@ -18,6 +18,7 @@ import {
 //import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Search, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navigation = {
   categories: [
@@ -187,7 +188,7 @@ export default function Header() {
                     <div className="grid grid-cols-2 gap-x-4">
                       {category.featured.map((item) => (
                         <div key={item.name} className="group relative text-sm">
-                          <img
+                          <Image
                             alt={item.imageAlt}
                             src={item.imageSrc}
                             className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
@@ -244,8 +245,8 @@ export default function Header() {
 
             <div className="border-t border-gray-200 px-4 py-6">
               <a href="#" className="-m-2 flex items-center p-2">
-                <img
-                  alt=""
+                <Image
+                  alt="Flag canada"
                   src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg"
                   className="block h-auto w-5 shrink-0"
                 />
@@ -273,8 +274,10 @@ export default function Header() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
-                  <img
-                    alt=""
+                  <Image
+                  width={100}
+                  height={100}
+                    alt="Logo"
                     src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                     className="h-8 w-auto"
                   />
@@ -305,7 +308,7 @@ export default function Header() {
                               <div className="col-start-2 grid grid-cols-2 gap-x-8">
                                 {category.featured.map((item) => (
                                   <div key={item.name} className="group relative text-base sm:text-sm">
-                                    <img
+                                    <Image
                                       alt={item.imageAlt}
                                       src={item.imageSrc}
                                       className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"

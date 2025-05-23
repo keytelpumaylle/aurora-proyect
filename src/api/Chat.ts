@@ -5,7 +5,37 @@ import { getProducts } from "./Products";
 const genAI = new GoogleGenerativeAI(process.env.TOKEN || "");
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
-export async function indication(state: any, formData: FormData) {
+interface Medicamento {
+    id: number;
+    name: string;
+    description: string;
+    indication: string;
+    contraindication: string;
+    dose: string;
+    price: number;
+    reason: string;
+  }
+  
+  interface SuccessResponse {
+    respuesta_gemini: string;
+    medicamentos: Medicamento[];
+  }
+  
+  interface ErrorResponse {
+    error: string;
+  }
+  
+  type APIResponse = SuccessResponse | ErrorResponse;
+  
+  // Si necesitas tipar el state (aunque en tu código actual no se usa)
+  interface AppState {
+    // Agrega aquí las propiedades adicionales del estado si las tienes
+    response?: APIResponse;
+    loading?: boolean;
+  }
+  
+
+export async function indication(state: AppState, formData: FormData) {
     const text = formData.get('indication'); // No asumas que siempre es string
     const products = await getProducts();
 
@@ -95,8 +125,8 @@ export async function indication(state: any, formData: FormData) {
             return { error: "La API no devolvió un objeto con el formato esperado. Respuesta recibida: " + responseText };
         }
 
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error("Error al llamar a la API de Gemini:", error);
-        return { error: `Error al llamar a la API: ${error.message || 'Error desconocido'}` }; // Devuelve un objeto de error
+        return { error: `Error al llamar a la API: ${error instanceof Error ? error.message : 'Error desconocido'}` };
     }
 }

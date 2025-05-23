@@ -34,6 +34,7 @@ export default function IndicationInfo() {
       const parsedData: ChatResults = JSON.parse(storedData);
       setGeminiResponse(parsedData.respuesta_gemini);
       setMedications(parsedData.medicamentos);
+      console.log("111111:", loading)
       setLoading(false);
     } catch (error) {
       console.error('Error al parsear los datos:', error);
