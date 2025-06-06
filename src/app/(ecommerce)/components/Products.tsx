@@ -1,5 +1,5 @@
 import { getProducts } from "@/api/Products"
-import Image from "next/image"
+import Medication from "./Medication"
 
 interface Products{
   id: number,
@@ -17,31 +17,21 @@ interface Products{
     return (
       <div className="bg-white pt-4 mb-30">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Tu salud es nuestra prioridad</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Respuestas claras para tus malestares impulsado por Aura</h2>
   
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-12">
             {products.map((product:Products) => (
-              <div key={product.id} className="">
-                <Image
-                  alt={product.name}
-                  src={'https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/424751L.jpg'}
-                  width={250}
-                  height={250}
-                  className="aspect-square w-full rounded-md bg-gray-800 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-50"
-                />
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="">
-                      <a>
-                        <span aria-hidden="true" className="" />
-                        {product.name}
-                      </a>
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-500">{product.description}</p>
-                  </div>
-                  <p className=" font-bold text-gray-900">s/{product.price}</p>
-                </div>
-              </div>
+              <Medication
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                indication={product.indication}
+                contraindication={product.contraindication}
+                dose={product.dose}
+                price={product.price}
+                imageUrl={product.imageUrl || 'https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/424751L.jpg'}
+              />
             ))}
           </div>
         </div>

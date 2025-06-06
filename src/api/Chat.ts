@@ -44,6 +44,7 @@ export async function indication(state: AppState, formData: FormData) {
             Eres un asistente médico experto. Tu tarea es:
 
             1. Analizar los síntomas descritos por el usuario: "${text}"
+            
 
             2. Revisar la lista de medicamentos disponibles: ${JSON.stringify(products)}
 
@@ -77,9 +78,16 @@ export async function indication(state: AppState, formData: FormData) {
                     ...
                 ]
             }
-
+            6. Si la respuesta que brindas no tiene un medicamento, puedes darle sus recomendacion, y el JSON para el medicamento mandalo vacio, para que no haya error en las consultas.
+            7.Indicaiones adicionales: La farmacia esta ubicada en Perú, por ende va a ver usuarios que usen jergas peruanas, por favor analiza las jergas como:
+            cachar = Tener relaciones sexuales
+            hoy soy con mi flaca = tener relaciones sexuales
+            hoy campeono = tener relaciones sexuales.
+            Prosigue con el analisis de los sintomas
+            estoy crudo = tengo resaca.
+            Ten en cuenta estas jergas para que puedas entender mejor el sintoma y asi poder recomendarle al usuario el medicamento que el necesita.
             Por favor, analiza los síntomas y proporciona recomendaciones basadas en los medicamentos disponibles.
-            Si un usuario se sale de contexto y hace otras preguntas que no sean de medicamentos o de sus malestares que tiene o algo similar, responde con un "Lo siento, no puedo procesar tu información."
+            "
             `;
 
         const response = await model.generateContent([

@@ -1,4 +1,4 @@
-import IndicationInfo from "../components/Indications";
+import IndicationInfo from "../../(ecommerce)/components/Indications";
 
 export default function ChatPage() {
   return (
