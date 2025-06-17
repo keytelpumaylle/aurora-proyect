@@ -81,7 +81,7 @@ export default function IndicationInfo() {
                   contraindication={med.contraindication}
                   dose={med.dose}
                   price={med.price}
-                  imageUrl={med.imageUrl || 'https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/424751L.jpg'}
+                  imageUrl={med.imageUrl}
                 />
               ))}
             </div>

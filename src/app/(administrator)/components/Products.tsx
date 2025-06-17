@@ -7,7 +7,7 @@ import { useActionState } from "react";
 export default function Products() {
     const [pending, action]= useActionState(registerProducts, undefined)
     return (
-        <form className="overflow-y-scroll h-[500px]" action={action}>
+        <form className="overflow-y-scroll h-[625px]" action={action}>
             <div className="space-y-12">
                 <div className="border-b border-gray-900/10 pb-12">
                     <h2 className="text-3xl font-bold">Nuevo Medicamento </h2>

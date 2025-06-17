@@ -73,6 +73,7 @@ export async function indication(state: AppState, formData: FormData) {
                         "contraindication": "string",
                         "dose": "string",
                         "price": number,
+                        "imageUrl": "string",
                         "reason": "Explicación de por qué se recomienda este medicamento"
                     },
                     ...
