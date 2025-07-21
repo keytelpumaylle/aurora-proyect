@@ -50,7 +50,7 @@ export async function indication(state: AppState, formData: FormData) {
 
             3. DEBES:
             - Recomendar solo medicamentos que estén en la lista proporcionada.
-            - Explicar claramente por qué recomiendas cada medicamento y por qué.
+            - Predecir su posible sintoma que pueda tener, dependiendo de los malestares del usuario
             - Mencionar las dosis recomendadas según la información disponible.
             - Advertir sobre posibles contraindicaciones.
             - Devolver la respuesta en un objeto JSON que contenga un campo "respuesta_gemini" con tu respuesta en texto enriquecido, y un campo "medicamentos" que sea un array de objetos con la información de los medicamentos recomendados.

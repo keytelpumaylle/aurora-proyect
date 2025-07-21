@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+/* Design Scrollbar*/
+@plugin 'tailwind-scrollbar' {
+    nocompatible: true;
+    preferredStrategy: 'pseudoelements';
+}
+
+@theme {
+    --color-dark: #121212;
+    --color-white: #ffffff;
+    --color-gray: #dcdcdc;
+    --color-graylight: #eaeaea;
+    --color-red: #FF4040;
+    --color-redopacity: #FF404050;
+    --color-blue: #26BBFF;
+}

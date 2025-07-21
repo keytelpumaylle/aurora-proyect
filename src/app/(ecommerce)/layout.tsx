@@ -8,11 +8,11 @@ export default async function EcommerceLayout({
 }) {
   return (
     <>
-      <Header />
+      <Header/>
       <main className="">
         {children}
       </main>
-      <footer className="fixed bottom-0  w-full  z-50">
+      <footer className="">
         <Chat />
       </footer>
     </>

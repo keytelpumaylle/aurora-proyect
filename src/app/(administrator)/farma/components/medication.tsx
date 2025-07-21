@@ -15,13 +15,12 @@ interface Props {
 }
 
 export default function Medication(props: Props) {
-  const {state,open,close} = useModalMedication()
+  const {state,close} = useModalMedication()
   return (
     <>
       <div
       key={props.id}
       className="group relative block rounded-md overflow-hidden p-0.5 transition-all duration-300 h-full"
-      onClick={open}
     >
       {/* Fondo degradado que aparece al hacer hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#885BDA] to-[#66D6D7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md z-0"></div>
