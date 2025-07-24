@@ -73,22 +73,23 @@ export default function Medication(props: Props) {
             
             
             {/* Contenido del modal dividido en dos columnas */}
-            <div className=" md:flex-row rounded-lg p-2">
-            <div className="flex h-[550px] overflow-y-auto">
+            <div className="flex flex-col md:flex-row rounded-lg p-2 min-h-[80vh] md:min-h-0 md:h-[550px] overflow-y-auto">
+            <div className="flex flex-col md:flex-row rounded-lg p-2 h-[550px] overflow-y-auto">
               {/* Columna izquierda - Imagen del producto */}
-              <div className="w-full md:w-1/2 relative">
+              <div className="w-full md:w-1/2 relative flex-shrink-0">
                 <div className="aspect-square flex items-center justify-center">
                   <Image
                     alt={selectedProduct.name}
                     src={selectedProduct.imageUrl}
                     width={450}
                     height={450}
+                    className="object-contain"
                   />
                 </div>
               </div>
               
               {/* Columna derecha - Detalles del producto */}
-              <div className="w-full md:w-1/2 p-6 flex flex-col overflow-y-scroll scrollbar-thin scrollbar-thumb-graylight scrollbar-thumb-rounded-full">
+              <div className="w-full md:w-1/2 p-6 flex flex-col flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-graylight scrollbar-thumb-rounded-full">
                 <div className="flex-1">
                   {/* Nombre del producto */}
                   <h4 className="text-3xl font-bold text-gray-900 mb-4">

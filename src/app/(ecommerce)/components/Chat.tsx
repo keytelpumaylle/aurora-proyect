@@ -2,7 +2,6 @@
 
 import { indication } from "@/api/Chat";
 import {
-  Mic,
   ArrowUp,
   LoaderCircle,
   MessageCircle,
@@ -11,16 +10,29 @@ import {
 import { useActionState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useModalChat } from "@/store/ModalChat";
+
 
 const STORAGE_EVENT = "chatResultsUpdated";
 
 export default function ChatInterface() {
   const router = useRouter();
   const [state, action, pending] = useActionState(indication, undefined);
+  const {userData} = useModalChat();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    sessionStorage.setItem("userSymptoms", e.target.value);
+  };
+
+   useEffect(() => {
+    if (typeof window !== "undefined" && userData) {
+      sessionStorage.setItem("userData", JSON.stringify(userData));
+    }
+  }, [userData]);
 
   // Redirección automática cuando el estado cambia
   useEffect(() => {
-    if (state) {
+    if (state) { 
       sessionStorage.setItem("chatResults", JSON.stringify(state)); // respuesta alamacenada temporalmente
       // Disparar evento personalizado
       window.dispatchEvent(
@@ -34,8 +46,9 @@ export default function ChatInterface() {
   }, [state, router]);
 
   return (
-    <div className="px-2 md:px-[100px] py-2 md:py-4 bg-white border-t-1 border-gray-300 flex justify-between items-center gap-8 fixed bottom-0 w-full z-50">
+      <div className="px-2 md:px-[100px] py-2 md:py-4 bg-white border-t-1 border-gray-300 flex justify-between items-center gap-8 fixed bottom-0 w-full z-50">
       <form action={action} className="flex-1">
+        <input type="hidden" name="userData" value={JSON.stringify(userData)} />
         {/* Contenedor principal con efecto de sombra degradada */}
         <div className="relative bg-white border border-gray-300 rounded-xl shadow-lg group">
           {/* Sombra degradada con desenfoque */}
@@ -44,12 +57,14 @@ export default function ChatInterface() {
           </div>
 
           <div className="flex gap-2 md:gap-2 items-center px-1 md:px-4">
-            <button
+            {/**
+             * <button
               type="button"
               className="bg-gray-200 rounded-full p-2 md:p-3 hover:bg-gradient-to-r hover:from-[#885BDA] hover:to-[#66D6D7] hover:text-white transition-all duration-300"
             >
               <Mic size={20} />
             </button>
+             */}
 
             <Link
               href={"/chat"}
@@ -82,6 +97,7 @@ export default function ChatInterface() {
               placeholder="Cuéntame. ¿Qué síntomas tienes?..."
               className="flex-1 bg-transparent border-0 focus:outline-none placeholder:text-zinc-500 py-6 group-hover:placeholder:text-[#885BDA]/70 transition-colors duration-300"
               disabled={pending}
+          onChange={handleInputChange}
             />
 
             {pending ? (

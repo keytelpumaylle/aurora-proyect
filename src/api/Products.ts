@@ -27,7 +27,14 @@ type RegistrationResponse = SuccessResponse | ErrorResponse;
 
 export async function getProducts() {
     try {
-        const response = await fetch(`${process.env.BACK_URL}/api/v1/medications`,{
+        const backUrl = process.env.BACK_URL;
+        
+        if (!backUrl) {
+            console.error('BACK_URL no está definida');
+            return [];
+        }
+        
+        const response = await fetch(`${backUrl}/api/v1/medications`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -35,17 +42,24 @@ export async function getProducts() {
         });
         
         if (!response.ok) {
-            throw new Error(`Error: ${response.status}`);
+            console.error(`Error HTTP: ${response.status}`);
+            return [];
         }
         
         const data = await response.json();
-        return data.data.medications; // Retorna directamente el array de entities
+        
+        // Verificación más robusta
+        if (data?.data?.medication && Array.isArray(data.data.medication)) {
+            return data.data.medication;
+        } else {
+            console.error('Estructura de respuesta inesperada:', data);
+            return [];
+        }
     } catch (error) {
         console.error('Error fetching products:', error);
-        return []; // Retorna array vacío en caso de error
+        return []; 
     }
 }
-
 export async function registerProducts(
     prevState: RegistrationResponse | undefined,
     formData: FormData
@@ -83,4 +97,41 @@ export async function registerProducts(
             }
         };
     }
+}
+
+export async function updateProducts(formData: FormData, id: number): Promise<RegistrationResponse> {
+    const value = {
+        name: formData.get('name') as string,
+        description: formData.get('description') as string,
+        indication: formData.get('indication') as string,
+        contraindication: formData.get('contraindication') as string,
+        dose: formData.get('dose') as string,
+        price: formData.get('price') as string,
+        imageUrl: formData.get('imageUrl') as string,
+    };
+
+    try {
+        const response = await fetch(`${process.env.BACK_URL}/api/v1/medications/${id}`, {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(value),
+        });
+
+        const data: RegistrationResponse = await response.json();
+        console.log(data);
+        return data;
+
+    } catch (error) {
+        console.error('Update error:', error);
+        return {
+            error: {
+                status: 500,
+                type: 'https://apifarma.tryasp.net/api/v1/errors/internal-error',
+                title: 'Error interno del servidor',
+                detail: ['Ocurrió un error inesperado'],
+                instance: `/api/v1/medications/${id}`
+            }
+        };
+    }
+    
 }

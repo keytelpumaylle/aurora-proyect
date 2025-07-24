@@ -13,7 +13,7 @@ interface Products{
 }
 
   export default async function Products() {
-    const products = await getProducts()
+    const products = await getProducts() || [];
     return (
       <div className="bg-white pt-2 mb-30 h-[calc(100vh-180px)] overflow-y-auto space-y-6">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">

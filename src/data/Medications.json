@@ -1,0 +1,1152 @@
+{
+  "medicamentos": [
+    {
+      "nombre": "KETAMINA",
+      "indicaciones": [
+        "Debridamiento de abscesos, curaciones muy dolorosas, injertos de piel en quemados, biopsias y otros procedimientos quirúrgicos superficiales",
+        "Procedimientos diagnósticos o quirúrgicos en ojos, oídos, nariz y boca (inclusive extracciones dentales)",
+        "Procedimientos extrapérticionales en ginecología",
+        "Reducción de fracturas cerradas, amputaciones y procedimientos ortopédicos"
+      ],
+      "reacciones_adversas": {
+        "cardiovasculares": [
+          "Elevación de P.A. y frecuencia de pulso (frecuente)",
+          "Bradicardia (raro)",
+          "Hipotensión (raro)",
+          "Arritmias (raro)"
+        ],
+        "sistema_nervioso_central": [
+          "Movimientos que pueden simular convulsiones",
+          "Alucinaciones",
+          "Confusión",
+          "Excitación",
+          "Sueños desagradables",
+          "Comportamiento irracional",
+          "Alteraciones psíquicas"
+        ],
+        "respiratorias": ["Apnea (si se administra muy rápidamente)"],
+        "digestivas": [
+          "Anorexia",
+          "Náuseas",
+          "Vómitos",
+          "Sialorrea"
+        ]
+      },
+      "equivalentes_comerciales": [
+        "CalypsoI",
+        "GENERICO",
+        "Ketalar"
+      ],
+      "dosificacion": {
+        "nota_general": "La respuesta varía individualmente y depende de la dosis, vía de administración y edad del paciente, por lo que la recomendación de dosis sólo es referencial",
+        "niños": {
+          "intravenosa": "2 mg/kg (aprox. 5 a 10 minutos de anestesia quirúrgica)",
+          "intramuscular": "10 mg/kg (aprox. 12 a 25 minutos de anestesia quirúrgica)"
+        },
+        "adultos": {
+          "intravenosa": "2 mg/kg (aprox. 5 a 10 minutos de anestesia quirúrgica)",
+          "intramuscular": "10 mg/kg (aprox. 12 a 25 minutos de anestesia quirúrgica)"
+        },
+        "mantenimiento": "Repetir dosis o dar una menor a la inicial (según respuesta individual), cada vez que sea necesario"
+      },
+      "precauciones_contraindicaciones": [
+        "Hipersensibilidad conocida",
+        "Casos donde la elevación de P.A. constituye un riesgo",
+        "No recomendado durante embarazo ni parto",
+        "Requiere supervisión médica experimentada",
+        "Administración IV muy lenta (mínimo 1 minuto)",
+        "Preferible con estómago vacío para evitar aspiración",
+        "Monitoreo constante de P.A., función cardíaca y ventilación",
+        "Disponer de equipo de resucitación",
+        "Reducir estimulación verbal y táctil",
+        "Precaución en alcohólicos",
+        "Precaución en pacientes con ACV, hipertensión, enfermedad cardíaca o trastornos psiquiátricos",
+        "Barbitúricos y narcóticos prolongan tiempo de recuperación"
+      ]
+    },
+    {
+      "nombre": "LIDOCAINA",
+      "indicaciones": [
+        "Uso exclusivo en odontocstomatología como anestésico local o troncular, para procedimientos quirúrgicos"
+      ],
+      "reacciones_adversas": {
+        "generales": [
+          "Relacionadas con sobredosis o inyección intravascular",
+          "Nerviosismo, agitación, euforia, visión borrosa, convulsiones",
+          "Hipotensión, bradicardia, depresión respiratoria",
+          "Reacciones alérgicas, crisis asmáticas",
+          "Náuseas, vómitos"
+        ]
+      },
+      "equivalentes_comerciales": [
+        "Dimecaina",
+        "GENERICOS",
+        "Xylocaina",
+        "Xilonest"
+      ],
+      "dosificacion": {
+        "niños": "Ajustar dosis según zona, edad, peso y respuesta individual. Concentraciones menores (0.5-1%), dosis límite <4 mg/kg o 100-150 mg",
+        "adultos": "Ajustar dosis según zona, edad, peso y respuesta individual"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en miastenia, hipovolemia e hipersensibilidad",
+        "No usar en zonas con inflamación o infección",
+        "Aspirar antes de inyectar para evitar inyección intravascular",
+        "Precaución en epilepsia, daño hepático/respiratorio, falla cardíaca, bradicardia, ancianos o debilitados"
+      ]
+    },
+    {
+      "nombre": "LIDOCAINA + EPINEFRINA",
+      "indicaciones": [
+        "Anestesia por infiltración y bloqueo neural"
+      ],
+      "reacciones_adversas": {
+        "sistema_nervioso_central": ["Parestesias", "Somnolencia", "Accidentes vascular cerebral", "Trismus", "Nerviosismo", "Agitación", "Euforia", "Visión borrosa", "Convulsiones"],
+        "cardiovasculares": ["Isquemia o necrosis", "Crisis hipertensiva"],
+        "otros": ["Reacciones alérgicas", "Náuseas", "Vómitos", "Metalhemoglobinemia"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS",
+        "Roxicaina 2% con Epinefrina",
+        "Xylonest 2% con Epinefrina",
+        "Xylocaina 2% con Epinefrina"
+      ],
+      "dosificacion": {
+        "nota_general": "La dosis varía según procedimiento, vascularización tisular, duración requerida, condición del paciente y respuesta individual",
+        "niños": "Utilizar concentraciones menores (0.5-1%)"
+      },
+      "precauciones_contraindicaciones": [
+        "Evitar en zonas irrigadas con arterias terminales (dedos, nariz, oreja, pene)",
+        "Precaución en hipertensión, insuficiencia vascular cerebral/periférica, arritmias, hipertiroidismo, diabetes mellitus, epilepsias"
+      ]
+    },
+    {
+      "nombre": "ACIDO ACETIL SALICILICO",
+      "indicaciones": [
+        "Dolor ligero a moderado de origen no-visceral",
+        "Fiebre",
+        "Prevención de trombosis arterial/venosa",
+        "Cefalea",
+        "Neuralgia, mialgia, artralgias",
+        "Dolor dental",
+        "Dismenorrea, dolores post-parto"
+      ],
+      "reacciones_adversas": {
+        "gastrointestinales": ["Hemorragia o lesión mucosa", "Dispepsia", "Epigastralgia", "Anorexia", "Náuseas", "Vómitos"],
+        "renales": ["Necrosis tubular", "Albuminuria", "Insuficiencia renal aguda"],
+        "piel": ["Rash acneiforme", "Urticaria"],
+        "otros": ["Tinnitus", "Pérdida de equilibrio", "Prolongación tiempo de sangría"],
+        "sobredosis": ["Alteraciones hidroelectrolíticas", "Acidosis", "Hiperpirexia", "Hiperventilación", "Alcalosis respiratorias"]
+      },
+      "equivalentes_comerciales": [
+        "Aspirina",
+        "Asawin",
+        "Ecotrin",
+        "GENERICOS",
+        "Mejoralito",
+        "Neofebrina",
+        "Rhonal",
+        "Sprint"
+      ],
+      "dosificacion": {
+        "niños": {
+          "fiebre_dolor": "65 mg/kg/día dividido en 4 dosis (2-11 años)"
+        },
+        "adultos": {
+          "fiebre_dolor": "500-750 mg cada 4-6 horas",
+          "antiinflamatorio": "1.5 a 5g en dosis divididas",
+          "profilaxis_tromboembolismo": "100-325 mg/día"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Evitar en niños con varicela o enfermedades tipo influenza (Síndrome de Reye)",
+        "Evitar en embarazo (anomalías congénitas, bajo peso fetal, hemorragias) y lactancia",
+        "Contraindicado en úlcera péptica, función renal alterada, deshidratación, asma con pólipos nasales, problemas coagulación",
+        "Ancianos más susceptibles a efectos tóxicos"
+      ]
+    },
+    {
+      "nombre": "PARACETAMOL",
+      "indicaciones": [
+        "Dolor leve a moderado de cualquier naturaleza",
+        "Dolor artrítico u osteoartrítico",
+        "Tratamiento sintomático de fiebre (Temperatura >38.5ºC)"
+      ],
+      "reacciones_adversas": {
+        "renales": ["Hematuria", "Micción dolorosa", "Oliguria", "Azotemia"],
+        "alergicas": ["Rash cutáneo", "Urticaria", "Prurito"],
+        "hematologicas": ["Hemorragias", "Hematomas", "Anemia", "Ictericia"],
+        "sobredosis": ["Cianosis", "Anemia", "Pancitopenia", "Neutropenia", "Leucopenia", "Ictericia", "Rash", "Fiebre", "Vómitos", "Excitación", "Delirio seguido de depresión y coma", "Colapso vascular", "Convulsiones", "Muerte (insuficiencia hepática)"]
+      },
+      "equivalentes_comerciales": [
+        "Acetalen", "Acetalgina", "Analgón", "Apirex", "Apiro", "Cabedol", "Calpol", "Cetadol", "Cortal", "Dolofebril", "Doltem", "Eraldor", "Focus", "GENERICOS", "Liviolex", "Mafidol", "Mebinol", "Panadol", "Pediaten", "Servinolen", "Tempra", "Teralgex", "Tylenol"
+      ],
+      "dosificacion": {
+        "lactantes_hasta_3_meses": "40 mg cada 6 horas",
+        "lactantes_4_a_12_meses": "80 mg cada 6 horas",
+        "niños_1_a_2_años": "120 mg cada 4-6 horas",
+        "niños_2_a_4_años": "160 mg cada 4-6 horas",
+        "niños_4_a_6_años": "240 mg cada 4-6 horas",
+        "niños_6_a_9_años": "320 mg cada 4-6 horas",
+        "niños_9_a_11_años": "400 mg cada 4-6 horas",
+        "niños_11_a_12_años": "480 mg cada 4-6 horas",
+        "adultos": "325-650 mg cada 4-6 horas según necesidad",
+        "notas": [
+          "Uso seguro en gestación y lactancia con dosis terapéuticas cortas",
+          "No usar más de 5 días seguidos ni exceder 5 dosis diarias"
+        ]
+      },
+      "precauciones_contraindicaciones": [
+        "No recomendable en alcohólicos crónicos o insuficiencia hepática",
+        "Contraindicado en hipersensibilidad conocida"
+      ]
+    },
+    {
+      "nombre": "METAMIZOL SODICO (DIPIRONA)",
+      "indicaciones": [
+        "Dolor moderado (cuando otros analgésicos son inefectivos o contraindicados)",
+        "Antipirético en fiebre muy intensa si otras medidas fallan"
+      ],
+      "reacciones_adversas": {
+        "hematologicas": ["Anemia aplásica", "Agranulocitosis (pueden ser fatales)", "Anemia hemolítica", "Púrpura trombocitopénica"],
+        "gastrointestinales": ["Náuseas", "Vómitos", "Epigastralgia", "Hemorragia digestiva"],
+        "otros": ["Edemas", "Rash", "Broncoespasmo", "Anuria", "Hipotensión arterial (administración EV)"]
+      },
+      "equivalentes_comerciales": [
+        "Antalgina", "Cortalgina", "Fenalgina", "GENERICOS", "Magalgina", "Novalgina", "Panalgin", "Piralgina", "Promalgen-N"
+      ],
+      "dosificacion": {
+        "niños": "250-500 mg cada 6 horas si necesario (máx 1g/día <6 años, 2g/día 6-12 años)",
+        "adultos": "500 mg a 1g cada 8 horas si necesario"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en alergia a pirazolonas, úlcera péptica activa, enfermedad hepática severa",
+        "Evitar en gestantes",
+        "Usar mínimo tiempo posible",
+        "Precaución con anticoagulantes orales, fenitoína o consumo alcohol",
+        "Suspender inmediatamente ante alteraciones hematológicas, fiebre, dolor garganta o rash"
+      ]
+    },
+    {
+      "nombre": "CLORFENAMINA",
+      "indicaciones": [
+        "Rinitis alérgica o vasomotora",
+        "Conjuntivitis alérgica",
+        "Urticaria, angioedema o reacciones por transfusión",
+        "Reacciones anafilácticas y anafilactoides"
+      ],
+      "reacciones_adversas": {
+        "sistema_nervioso_central": ["Somnolencia", "Confusión", "Nerviosismo", "Irritabilidad", "Cefalea", "Insomnio", "Mareos", "Diplopia", "Visión borrosa"],
+        "digestivas": ["Náuseas", "Vómito", "Diarrea", "Constipación", "Anorexia"],
+        "cardiovasculares": ["Palpitaciones", "Taquicardia", "Hipotensión"],
+        "piel": ["Fotosensibilidad", "Urticaria", "Rash"],
+        "otros": ["Hemólisis", "Obstrucción urinaria", "Espesamiento secreciones bronquiales", "Epigastralgia", "Glaucoma"]
+      },
+      "equivalentes_comerciales": [
+        "Cloro Alergán", "Clorotrimetón", "GENERICOS", "Histatón"
+      ],
+      "dosificacion": {
+        "niños": {
+          "oral": "2 mg 3-4 veces/día (6-12 años)",
+          "subcutaneo": "0.0875 mg/kg o 2.5 mg/m² superficie cada 6 horas"
+        },
+        "adultos": {
+          "oral": "4 mg cada 4-6 horas",
+          "parenteral": "5-40 mg dosis única (IM/IV/SC), repetir según necesidad"
+        },
+        "notas": ["No recomendado <6 años", "Reducir dosis en geriátricos"]
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad a antihistamínicos",
+        "No usar en neonatos, 3er trimestre gestación, glaucoma, hipertrofia prostática, asma, obstrucción pilórica",
+        "No aconsejable para actividades que requieren alerta mental, HTA, enfermedad cardiovascular, hipertiroidismo",
+        "Evitar alcohol u otros depresores SNC"
+      ]
+    },
+    {
+      "nombre": "PREDNISONA",
+      "indicaciones": [
+        "Desórdenes alérgicos refractarios",
+        "Episodios agudos de asma bronquial",
+        "Enfermedad reumática (A.R.) refractaria",
+        "Terapia reemplazo en insuficiencia suprarrenal crónica",
+        "Algunas formas de TBC (suprimir inflamación/fibrosis)",
+        "Algunas formas de síndrome nefrótico"
+      ],
+      "reacciones_adversas": {
+        "gastrointestinales": ["Enmascara síntomas de úlcera péptica"],
+        "metabolicas": ["Hipernatremia (edemas)", "Hipokalemia", "Balance nitrogenado negativo", "Hiperglicemia", "Hiperlipidemia"],
+        "osteomusculares": ["Osteoporosis", "Fracturas vertebrales", "Miopatía proximal", "Supresión crecimiento en niños"],
+        "sistema_nervioso_central": ["Cambios conducta", "Euforia", "Insomnio", "Irritabilidad", "Episodios sicóticos", "Cefalea", "Seudo tumor cerebral"],
+        "piel": ["Atrofia", "Estrias", "Acné", "Hirsutismo", "Dermatitis perioral"],
+        "ojo": ["Glaucoma", "Infecciones", "Catarata subcapsular posterior"],
+        "inmunologicas": ["Reactivación TBC", "No respuesta a Tuberculina", "Aumento sensibilidad a infecciones por hongos"],
+        "otros": ["Alteraciones menstruales", "Facies 'luna llena'", "Acúmulo grasa supraclavicular", "HTA", "Aumento peso", "Impotencia", "Hiperhidrosis", "Rubor", "Vértigo"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS", "Melicorten", "Nisona"
+      ],
+      "dosificacion": {
+        "nota_general": "Individualizar según enfermedad y respuesta del paciente",
+        "dosis_fisiologicas": "5-7.5 mg/día (fraccionada mañana/tarde)",
+        "dosis_farmacologicas": "20-80 mg/día (según gravedad), en 1-2 tomas",
+        "mantenimiento": "Régimen en días alternos reduce reacciones adversas"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en infecciones sistémicas por hongos a dosis farmacológicas",
+        "Precaución en úlcera péptica, HTA, embarazo, diabetes, insuficiencia cardíaca, osteoporosis, tromboflebitis, desórdenes convulsivos, sicosis",
+        "Suspender lactancia en dosis farmacológicas",
+        "Retiro progresivo por riesgo atrofia suprarrenal",
+        "Múltiples interacciones con hipoglicemiantes, insulina, Rifampicina, Fenitoína, Carbamazepina, Fenobarbital, diuréticos"
+      ]
+    },
+    {
+      "nombre": "DEXAMETASONA",
+      "indicaciones": [
+        "Desórdenes alérgicos agudos severos",
+        "Episodios agudos intensos de desórdenes reumáticos",
+        "Edema cerebral",
+        "Asma bronquial aguda",
+        "Distress respiratorio neonatal",
+        "Terapia coadyuvante en TBC pulmonar"
+      ],
+      "reacciones_adversas": "Ver sección de PREDNISONA",
+      "equivalentes_comerciales": [
+        "Decadrón", "Dexacort", "Dexavet", "GENERICOS", "Fortecorin", "Oradexon"
+      ],
+      "dosificacion": {
+        "rutas_iv_im": "0.5-9 mg/día según enfermedad",
+        "rutas_ia_il_tb": "0.2-6 mg cada 2-3 días o 2-3 semanas",
+        "edema_cerebral": "Dosis inicial: 10 mg IV, luego 4 mg IM hasta control, reducir progresivamente"
+      },
+      "precauciones_contraindicaciones": [
+        "Mismas que PREDNISONA",
+        "Reportadas reacciones anafilácticas raras"
+      ]
+    },
+    {
+      "nombre": "EPINEFRINA",
+      "indicaciones": [
+        "Crisis aguda de asma bronquial",
+        "Broncoespasmo en EPOC",
+        "Reacciones alérgicas severas a fármacos, alimentos, sueros, picaduras",
+        "Shock anafiláctico",
+        "Edema laríngeo agudo no infeccioso",
+        "Paro cardíaco"
+      ],
+      "reacciones_adversas": {
+        "sistema_nervioso_central": ["Ansiedad", "Temblor", "Hiperquinesia", "Irritabilidad", "Insomnio", "Vértigo", "Cefalea", "Accidentes cerebrovasculares"],
+        "cardiovasculares": ["Hipertensión arterial", "Taquicardia", "Arritmias", "Dolor anginoso", "Edema pulmonar"],
+        "digestivas": ["Náuseas", "Vómitos", "Anorexia", "Acidez", "Dolor abdominal"],
+        "otros": ["Palidez", "Sudoración", "Broncoespasmo de rebote", "Retención urinaria"]
+      },
+      "equivalentes_comerciales": [
+        "Adrenalina", "GENERICOS"
+      ],
+      "dosificacion": {
+        "niños": "0.01 mg/kg SC (repetir después 20-30 min, max 2-3 veces)",
+        "adultos": "0.2-0.4 mg SC (repetir después 20-30 min, max 2-3 veces)"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, infarto, angina, arritmias u otra patología cardíaca orgánica",
+        "Solo indicado en shock anafiláctico",
+        "Evitar durante gestación, precaución en niños",
+        "Máxima precaución en ancianos, enfermedad orgánica cerebral, insuficiencia vascular cerebral, diabetes, hipertiroidismo, HTA",
+        "Interacciones con antidepresivos tricíclicos, hormonas tiroideas, antihistamínicos, anestésicos, diuréticos, digitálicos"
+      ]
+    },
+    {
+      "nombre": "FENITOÍNA",
+      "indicaciones": [
+        "Control de convulsiones tónico-clónicas y sicomotoras (gran mal y lóbulo temporal)"
+      ],
+      "reacciones_adversas": {
+        "sistema_nervioso_central": ["Nistagmo", "Ataxia", "Disartria", "Confusión", "Somnolencia", "Insomnio", "Diplopia", "Fatiga", "Irritabilidad", "Depresión", "Cefalea (dosis-dependientes)"],
+        "digestivas": ["Náuseas", "Vómitos", "Diarrea", "Constipación", "Daño hepático severo"],
+        "hipersensibilidad": ["Reacciones dérmicas graves o fatales"],
+        "hematopoyeticas": ["Trombocitopenia", "Leucopenia", "Agranulocitosis", "Pancitopenia", "Macrocitosis", "Anemia megaloblástica"],
+        "otros": ["Engrosamiento rasgos faciales", "Hiperplasia gingival", "Ganancia peso", "Hirsutismo"]
+      },
+      "equivalentes_comerciales": [
+        "Epamín", "GENERICOS"
+      ],
+      "dosificacion": {
+        "niños": "Iniciar con 5 mg/kg/día dividido en 2-3 fracciones, no exceder 300 mg/día",
+        "adultos": "Iniciar con 100 mg 3 veces/día, ajustar según respuesta"
+      },
+      "precauciones_contraindicaciones": [
+        "Supresión brusca puede precipitar convulsiones",
+        "Contraindicado en embarazo, lactancia, enfermedad hepática severa, porfiria",
+        "Múltiples interacciones medicamentosas"
+      ]
+    },
+    {
+      "nombre": "DIAZEPAM",
+      "indicaciones": [
+        "Ansiedad moderada a severa, agitación",
+        "Síndrome abstinencia alcohólica",
+        "Insomnio asociado a ansiedad",
+        "Espasmo muscular esquelético",
+        "Terapia complementaria en desórdenes convulsivos",
+        "Premedicación en cirugía/procedimientos invasivos"
+      ],
+      "reacciones_adversas": {
+        "locales": ["Eritema", "Edema", "Dolor", "Flebitis", "Trombosis venosa (inyección)"],
+        "sistema_nervioso_central": ["Mareo", "Confusión", "Ataxia", "Depresión mental", "Alucinaciones", "Insomnio", "Excitabilidad", "Disartria", "Nistagmo", "Diplopia"],
+        "digestivas": ["Constipación", "Náuseas", "Hipo", "Ictericia"],
+        "genitourinarias": ["Incontinencia", "Retención urinaria", "Alteración libido"],
+        "cardiovasculares": ["Hipotensión", "Colapso", "Bradicardia"],
+        "piel": ["Urticaria", "Rash dérmico"]
+      },
+      "equivalentes_comerciales": [
+        "Ansiolin", "Diazemil", "GENERICOS", "Pacifran", "Valium", "Vazen"
+      ],
+      "dosificacion": {
+        "niños": {
+          "iv": "<5 años: max 0.20 mg/kg; >5 años: 1-5 mg IV (repetir en 15 min)"
+        },
+        "adultos": {
+          "oral": "2-10 mg 1-3 veces/día",
+          "parenteral": "5-10 mg IV (repetir después 4 hs si necesario)"
+        },
+        "notas": ["Iniciar con mitad dosis en ancianos o debilitados"]
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, glaucoma agudo no controlado, shock, coma, insuficiencia respiratoria severa, primer trimestre embarazo",
+        "Precaución en ansiedad con depresión y tendencias suicidas",
+        "Evitar altas dosis o largos períodos (dependencia)",
+        "Forma inyectable: no mezclar con otras soluciones, administrar en vena gruesa lentamente"
+      ]
+    },
+    {
+      "nombre": "BENCILPENICILINA PROCAINICA",
+      "indicaciones": [
+        "Infecciones respiratorias moderadas/severas por pneumococo o estreptococos grupo A",
+        "Erisipelas, impétigo, anthrax, infecciones piel/tejidos blandos, escarlatina",
+        "Infecciones gonocócicas",
+        "Sifilis, Pinta, Plan",
+        "Gingivitis ulcerativa necrotizante",
+        "Difteria, profilaxis endocarditis, infecciones por estafilococos sensibles"
+      ],
+      "reacciones_adversas": {
+        "locales": ["Dolor en zona aplicación"],
+        "hipersensibilidad": ["Edema angioneurótico", "Broncoespasmo", "Hipotensión", "Colapso vascular", "Muerte"],
+        "piel": ["Prurito", "Urticaria", "Rash"],
+        "sistema_nervioso_central": ["Ansiedad", "Agitación", "Confusión", "Alucinaciones", "Convulsiones (relación con Procaina)"],
+        "especiales": ["Reacción de Jarisch Herkheimer (tratamiento sífilis)"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS"
+      ],
+      "dosificacion": {
+        "niños": "20,000-50,000 UI/kg/día en 1 dosis x 10 días",
+        "adultos": "600,000-1,000,000 UI/día en 1-2 dosis x 10 días"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en alergia a penicilina/cefalosporinas y Procaina",
+        "Evitar aplicación intravascular o cerca de nervios (daño neurovascular)",
+        "Uso exclusivo intramuscular"
+      ]
+    },
+    {
+      "nombre": "BENCILPENICILINA BENZATINICA",
+      "indicaciones": [
+        "Infecciones estreptocócicas leves/moderadas vías respiratorias",
+        "Infecciones piel/tejidos blandos leves/moderadas",
+        "Profilaxis de fiebre reumática",
+        "Sífilis primaria/secundaria"
+      ],
+      "reacciones_adversas": {
+        "locales": ["Dolor"],
+        "hipersensibilidad": ["Rash", "Urticaria", "Fiebre", "Angioedema", "Shock anafiláctico"],
+        "neurologicas": ["Daño vascular o nervioso si inyectada intravascular o cerca nervios"]
+      },
+      "equivalentes_comerciales": [
+        "Benzetaci LA", "GENERICOS"
+      ],
+      "dosificacion": {
+        "niños": {
+          "<30 kg": "600,000 UI",
+          ">30 kg": "1,200,000 UI"
+        },
+        "adultos": {
+          "infecciones_respiratorias_piel": "1,200,000 UI",
+          "sifilis_<1_año": "2,400,000 UI dosis única",
+          "sifilis_>1_año": "2,400,000 UI/semana x 3 semanas",
+          "profilaxis_fiebre_reumatica": "1,200,000 UI cada 5 semanas"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad a penicilina o cefalosporinas",
+        "Uso exclusivo IM profundo",
+        "Fraccionar dosis de 2,400,000 UI en ambas nalgas"
+      ]
+    },
+    {
+      "nombre": "AMOXICILINA",
+      "indicaciones": [
+        "Infecciones oído, nariz, garganta, tracto respiratorio",
+        "Infecciones tracto genito-urinario",
+        "Infecciones piel/tejidos blandos",
+        "Alternativa en gonorrea, fiebre tifoidea, profilaxis endocarditis"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Náuseas", "Vómitos", "Diarrea"],
+        "hipersensibilidad": ["Urticaria", "Rash eritematoso o máculo-papular"],
+        "hematologicas": ["Anemia", "Trombocitopenia (púrpura)", "Eosinofilia", "Leucopenia", "Agranulocitosis"]
+      },
+      "equivalentes_comerciales": [
+        "Alfamox", "Amoquín", "Amoxidín", "Amoxil", "Amoxipen", "Amploxil S", "Bristamox", "Clavoxilín", "Dentren", "Fulkilina", "GENERICOS", "Grunamox", "Magnimox", "Penamox", "Rhamoxilina", "Servamox", "Trifamox", "Ulamox", "Velamox", "Wintramox", "Wyrmox"
+      ],
+      "dosificacion": {
+        "niños": "20-40 mg/kg/día dividido c/8 hs x 7-14 días",
+        "adultos": "250-500 mg c/8 hs x 7-14 días"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en alergia a penicilinas/cefalosporinas",
+        "Seguridad en gestación no establecida"
+      ]
+    },
+    {
+      "nombre": "DICLOXACILINA",
+      "indicaciones": [
+        "Infecciones por estafilococos productores de penicilinasa"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Náuseas", "Vómitos", "Malestar epigástrico", "Flatulencia", "Diarrea", "Colestasis"],
+        "hipersensibilidad": ["Prurito", "Urticaria", "Rash", "Eosinofilia", "Anafilaxia"],
+        "otros": ["Hemólisis", "Nefritis intersticial"]
+      },
+      "equivalentes_comerciales": [
+        "Dicloxal", "Doclocil", "Diclobiot", "GENERICOS", "Posipen"
+      ],
+      "dosificacion": {
+        "niños": "<30 kg: 12.5 mg/kg/día en 4 fracciones",
+        "adultos": "250 mg cada 6 hs x 7-10 días"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad a penicilinas/cefalosporinas",
+        "Seguridad en gestantes no establecida",
+        "Administrar con estómago vacío (1-2 hs antes comidas)",
+        "Cloramfenicol, tetraciclinas y eritromicina disminuyen actividad"
+      ]
+    },
+    {
+      "nombre": "ERITROMICINA",
+      "indicaciones": [
+        "Alternativo para alérgicos a PNC en infecciones estreptocócicas",
+        "Amebiasis intestinal, infecciones urogenitales por Chlamydia",
+        "Neumonía atípica (Mycoplasma), bronquitis crónica",
+        "Enteritis por Campilobacter jejuni",
+        "Difteria (con antitoxina)"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Náuseas", "Vómitos", "Dolor abdominal", "Diarrea", "Anorexia", "Disfunción hepática"],
+        "hipersensibilidad": ["Rash", "Prurito", "Urticaria", "Anafilaxia (raro)"],
+        "auditivas": ["Sordera transitoria a dosis alta (raro)"]
+      },
+      "equivalentes_comerciales": [
+        "Broncomicin NF", "Erisone", "Eritrobiotic", "Eritrocina", "Entromil", "Eromycin", "Eryc", "GENERICOS", "Iiosone", "Macrol", "Neotrocin", "Pantogram", "Pantomicina", "Selvicin", "Servitrocin"
+      ],
+      "dosificacion": {
+        "niños": "30-50 mg/kg/día en 4 dosis c/6 hs x 1-2 semanas",
+        "adultos": "250-500 mg c/6 hs x 1-2 semanas"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, porfiria, enfermedad hepática/renal severa",
+        "Seguridad en gestación no determinada",
+        "Aumenta toxicidad de teofilina"
+      ]
+    },
+    {
+      "nombre": "CLORAMFENICOL",
+      "indicaciones": [
+        "Fiebre tifoidea y paratífica",
+        "Infecciones por Haemophilus influenzae",
+        "Sepsis abdominal/pélvica (combinado con aminoglicósido)",
+        "Tifus exantemático",
+        "Bartoneiosis (fase aguda)",
+        "Alternativo en actinomicosis, anthrax, linfogranuloma venéreo, psitacosis"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Náuseas", "Vómitos", "Glositis", "Sabor desagradable", "Estomatitis", "Diarrea", "Colitis seudomembranosa"],
+        "neonatales": ["Síndrome gris (palidez, cianosis, colapso, muerte)"],
+        "hematologicas": ["Anemia aplásica", "Inhibición reversible médula ósea"],
+        "neurologicas": ["Neuritis óptica", "Neuritis periférica", "Confusión", "Delirio"],
+        "hipersensibilidad": ["Reacciones alérgicas"]
+      },
+      "equivalentes_comerciales": [
+        "Chloromycetin", "Cloromisan", "Farmicetina", "GENERICOS", "Palmicioran", "Quemicetina", "Serviclofen"
+      ],
+      "dosificacion": {
+        "niños": "20-50 mg/kg/día dividido c/6 hs x 14 días",
+        "adultos": "50 mg/kg/día dividido c/6 hs"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad",
+        "Múltiples interacciones medicamentosas",
+        "Controlar periódicamente hemogramas",
+        "Evitar fármacos depresores de médula ósea"
+      ]
+    },
+    {
+      "nombre": "DOXICICLINA",
+      "indicaciones": [
+        "Brucelosis",
+        "Cólera",
+        "Uretritis no gonocócica, prostatitis",
+        "Linfogranuloma venéreo, granuloma inguinal, chancroide",
+        "Enfermedad inflamatoria pélvica",
+        "Neumonía atípica, bronquitis crónica",
+        "Ricketsiosis (Tifus)",
+        "Acné pustuloso, Amebiasis intestinal, Tracoma"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Náuseas", "Vómitos", "Gastritis", "Disfagia (frecuentes)"],
+        "dermicas": ["Fotosensibilidad", "Rash morbilliforme/máculo-papular", "Prurito", "Dermatitis exfoliativa"],
+        "hipersensibilidad": ["Angioedema", "Eosinofilia", "Anafilaxis", "Enfermedad del suero"],
+        "sistema_nervioso_central": ["Cefalea", "Mareos", "Vértigos", "Ataxia", "Fatiga", "Incremento presión intracraneal"],
+        "dentales": ["Coloración permanente dientes", "Hipoplasia esmalte", "Retraso crecimiento óseo (niños)"],
+        "renales": ["Incremento Nitrógeno ureico"],
+        "hematologicas": ["Leucocitosis", "Púrpura trombocitopénica"]
+      },
+      "equivalentes_comerciales": [
+        "Doxilin", "GENERICOS", "Sigadoxin", "Supracylin", "Vibramicina"
+      ],
+      "dosificacion": {
+        "niños": "No indicada (<12 años o <50 kg)",
+        "adultos": "100 mg c/12 hs inicial, luego 100-200 mg/día x 7-14 días"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en niños <12 años, gestantes, lactantes, hepatopatías graves, hipersensibilidad a tetraciclinas",
+        "No administrar con antiácidos"
+      ]
+    },
+    {
+      "nombre": "GENTAMICINA",
+      "indicaciones": [
+        "Infecciones graves por gram negativos (Pseudomonas, Proteus, E.coli, etc)",
+        "Infecciones serias/complicadas tracto urinario",
+        "Sepsis abdominal/ginecológica, infecciones post-operatorias",
+        "Infecciones graves piel/tejidos blandos (quemaduras)",
+        "Neumonía/bronconeumonía por gérmenes sensibles"
+      ],
+      "reacciones_adversas": {
+        "nefrotoxicidad": ["Proteinuria", "Cilindruria", "Oliguria", "Retención nitrogenada"],
+        "neurotoxicidad": ["Mareos", "Vértigo", "Tinnitus", "Sordera", "Neuropatía periférica", "Parestesias", "Convulsiones", "Síndrome similar a miastenia gravis", "Cefalea", "Alteraciones visuales"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS", "Gentaibiotic", "Gentagram", "Gentahyn", "Gentaplen", "Gentasil", "Gentasona", "Ikafin", "Rigaminol", "Trifagen"
+      ],
+      "dosificacion": {
+        "niños": "2-5 mg/kg/día dividido en 2-3 dosis IM/IV x 10-15 días",
+        "adultos": "3 mg/kg/día dividido en 2-3 dosis IM/IV"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, miastenia gravis",
+        "Seguridad en embarazo/lactancia no establecida",
+        "Riesgo aumentado con otros nefro/ototóxicos, deshidratación, ancianos, problemas renales previos",
+        "Ajustar dosis en insuficiencia renal/ancianos, monitorizar función ótica/renal"
+      ]
+    },
+    {
+      "nombre": "SULFAMETOXAZOL + TRIMETOPRIMA",
+      "indicaciones": [
+        "Infección urinaria complicada o no, aguda o recidivante",
+        "Diarrea disenteriforme aguda (shigellosis)",
+        "Bronquitis crónica (exacerbaciones agudas)",
+        "Otitis media",
+        "Alternativo: Fiebre tifoidea, brucelosis, cólera, granuloma inguinal"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Náuseas", "Vómitos", "Dolor abdominal", "Diarrea"],
+        "alergicas": ["Rash", "Urticaria", "Reacciones graves/fatales (raras)"],
+        "renales": ["Nefritis intersticial", "Insuficiencia renal", "Cristaluria"],
+        "sistema_nervioso_central": ["Alucinaciones", "Confusión", "Cefalea", "Convulsiones", "Neuritis", "Ataxia", "Vértigo"],
+        "otros": ["Artralgias/mialgias", "Debilidad", "Infiltrados pulmonares"]
+      },
+      "equivalentes_comerciales": [
+        "Bacterol", "Bactrim", "Bactyzol", "Cotrimoxazol", "Exazol", "GENERICOS", "Mebryn", "Septrin", "NovotrimPlus", "Suprasulf"
+      ],
+      "dosificacion": {
+        "niños": "20-30 kg: 7.5 ml suspensión",
+        "adultos": "1 tableta cada 12 horas"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, anemia megaloblástica, gestantes a término, lactancia (Kernicterus)",
+        "Precaución en insuficiencia renal/hepática, deficiencia folatos, alérgicos, asmáticos",
+        "Seguridad en gestantes/lactantes/menores 2 años no establecida"
+      ]
+    },
+    {
+      "nombre": "MEBENDAZOL",
+      "indicaciones": [
+        "Tricocoefaliasis (Trichuris trichura)",
+        "Ascaridiasis (Ascaris lumbricoides)",
+        "Uncinariasis (Ancylostoma duodenale, Necator americanus)",
+        "Oxiuriasis (Enterobius vermicularis)",
+        "Alternativo para céstodos, larva migrans cutánea, estrongiloidiasis, triquinosis, hidatidosis"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Molestias digestivas", "Dolor abdominal", "Náuseas", "Vómitos"],
+        "neurologicas": ["Cefalea"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS", "Pantelmin", "Parasitex", "Penalcol", "Vermofree"
+      ],
+      "dosificacion": {
+        "oxiuriasis": "100 mg dosis única, repetir en 2-3 semanas",
+        "ascaris_trichuris_uncinarias": "100 mg c/12 hs x 3 días",
+        "notas": ["No establecida seguridad <2 años"]
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en gestación",
+        "Seguro en lactancia",
+        "Precaución en ileitis, colitis ulcerativa, disfunción hepática",
+        "Puede interactuar con Carbamazepina",
+        "Corregir anemia por parasitosis"
+      ]
+    },
+    {
+      "nombre": "METRONIDAZOL",
+      "indicaciones": [
+        "Giardiasis",
+        "Amebiasis (disentería, absceso)",
+        "Vaginitis tricomonásica",
+        "Infecciones por anaerobios (Bacteroides fragilis)",
+        "Balantidiasis (alternativo)"
+      ],
+      "reacciones_adversas": {
+        "sistema_nervioso_central": ["Convulsiones", "Mareo", "Vértigo", "Incoordinación", "Neuropatía", "Confusión", "Depresión", "Cefalea", "Insomnio"],
+        "digestivas": ["Anorexia", "Náuseas", "Vómitos", "Sabor metálico", "Diarrea", "Epigastralgia", "Glositis", "Estomatitis"],
+        "urinarias": ["Cistitis", "Incontinencia", "Pollúria", "Orina oscura"],
+        "otros": ["Neutropenia reversible", "Urticaria", "Congestión nasal"]
+      },
+      "equivalentes_comerciales": [
+        "Dequazol", "Flagyj", "GENERICOS", "Nidazolem", "Norstene", "Otrozol", "Servidazol"
+      ],
+      "dosificacion": {
+        "niños": {
+          "trichomoniasis": "15 mg/kg/día dividido c/8 hs x 7-10 días",
+          "giardiasis": "15 mg/kg/día dividido c/8 hs x 5-7 días",
+          "amebiasis": "35-50 mg/kg/día dividido c/8 hs x 10 días"
+        },
+        "adultos": {
+          "trichomoniasis": "2g dosis única o 250 mg 3 veces/día x 7 días",
+          "giardiasis": "250 mg 3 veces/día x 5-7 días",
+          "amebiasis": "500-750 mg 3 veces/día x 5-10 días",
+          "anaerobios": "5 mg/kg c/6-8 hs"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "No usar en primer trimestre embarazo ni lactancia",
+        "Precaución en discracias sanguíneas, insuficiencia hepática severa",
+        "Reacción con alcohol: dolor cabeza, náuseas, vómitos, dolor abdominal, sudoración"
+      ]
+    },
+    {
+      "nombre": "SULFATO FERROSO",
+      "indicaciones": [
+        "Tratamiento de anemias por deficiencia de fierro",
+        "Prevención/corrección de ferropenia en gestación, menorragia, gastrectomía, recién nacidos bajo peso, niños 6-12 meses"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Pirosis", "Anorexia", "Sabor metálico", "Náuseas", "Vómitos", "Estreñimiento", "Heces negras", "Diarreas"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS", "Ferinsol", "Iberol"
+      ],
+      "dosificacion": {
+        "niños": {
+          "anemia": "4-6 mg (Fe elemental)/día en 2-3 dosis, 1h antes comidas x 6 meses",
+          "prevencion": "Mitad dosis dosis desde 3-12 meses"
+        },
+        "adultos": {
+          "anemia": "150-200 mg (Fe elemental)/día en 2-3 dosis, 1h antes comidas x 6 meses",
+          "prevencion_embarazo": "50 mg (Fe elemental)/día segunda mitad gestación"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hemocromatosis, anemias no ferropénicas",
+        "Evitar en úlcera péptica activa, sangrado digestivo, enfermedad inflamatoria intestinal",
+        "Antiácidos, huevos, leche, tetraciclinas disminuyen absorción",
+        "Controlar reticulocitos a los 7-10 días",
+        "Administrar con alimentos si molestias digestivas"
+      ]
+    },
+    {
+      "nombre": "SULFATO FERROSO + ACIDO FOLICO",
+      "indicaciones": [
+        "Gestantes a partir de la segunda mitad del embarazo"
+      ],
+      "reacciones_adversas": "Mismas que Sulfato Ferroso",
+      "equivalentes_comerciales": ["No existen equivalentes comerciales"],
+      "dosificacion": {
+        "adultos": "1 tableta dos veces al día"
+      },
+      "precauciones_contraindicaciones": [
+        "Mismas que Sulfato Ferroso",
+        "Ácido fólico puede enmascarar anemia perniciosa",
+        "Puede disminuir niveles de fenitoína"
+      ]
+    },
+    {
+      "nombre": "PROPRANOLOL",
+      "indicaciones": [
+        "Hipertensión arterial",
+        "Angina de pecho por ateroesclerosis coronaria",
+        "Infarto de miocardio",
+        "Arritmias cardíacas supraventriculares, taquicardia ventricular",
+        "Tirotoxicosis (hipertiroidismo)",
+        "Prevención de crisis de migraña",
+        "Temblor esencial",
+        "Hemorragia por ruptura várices esofágicas"
+      ],
+      "reacciones_adversas": {
+        "cardiovasculares": ["Bradicardia", "Insuficiencia cardíaca", "Retención fluidos", "Edema pulmonar", "Hipotensión", "Síncope", "Shock", "Angina de pecho"],
+        "vasculares": ["Insuficiencia vascular periférica"],
+        "respiratorias": ["Broncoespasmo", "Congestión nasal"],
+        "sexuales": ["Disfunción sexual (problemas erección)"],
+        "sistema_nervioso_central": ["Alucinaciones", "Deterioro intelectual (ancianos)", "Confusión", "Irritabilidad", "Ataxia", "Alteraciones visión/audición"],
+        "metabolicas": ["Disminución tolerancia glucosa"]
+      },
+      "equivalentes_comerciales": [
+        "Inderal", "GENERICOS"
+      ],
+      "dosificacion": {
+        "niños": "1-4 mg/kg/día dividido en 2-4 dosis",
+        "adultos": {
+          "hta": "40-160 mg cada 12 horas",
+          "angina": "10-20 mg cada 6-8 horas",
+          "migraña": "40-80 mg cada 12 horas"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en bradicardia, bloqueos AV, shock cardiogénico, ICC, asma bronquial",
+        "Precaución en insuficiencia vascular periférica, diabetes, enfermedades hepáticas/renales/pulmonares, hipotiroidismo"
+      ]
+    },
+    {
+      "nombre": "DIGOXINA",
+      "indicaciones": [
+        "Insuficiencia cardíaca",
+        "Control de arritmias supraventriculares (taquicardia paroxística supraventricular, fibrilación/fluter auricular)"
+      ],
+      "reacciones_adversas": {
+        "digestivas": ["Anorexia", "Náuseas", "Vómitos", "Dolor abdominal"],
+        "sistema_nervioso_central": ["Cefalea", "Confusión", "Alteraciones visuales", "Apatía"],
+        "cardiacas": ["Arritmias (toxicidad digitalica)"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS", "Natigoxina"
+      ],
+      "dosificacion": {
+        "niños": {
+          "saturacion": "0.03-0.05 mg/kg",
+          "mantenimiento": "20-25% dosis saturación/día"
+        },
+        "adultos": {
+          "saturacion_rapida": "0.25 mg c/6-8 hs x 1 día",
+          "saturacion_lenta": "0.25 mg c/24 hs x 5-7 días",
+          "mantenimiento": "0.125-0.375 mg/día"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, fibrilación ventricular",
+        "Disminuir dosis en insuficiencia renal",
+        "No dar Ca IV simultáneo",
+        "Precaución en hipopotasemia, problemas tiroideos",
+        "Monitorear electrólitos, ECG, función renal/hepática",
+        "Interacciones con antiácidos, kaolín, simpatomiméticos, diuréticos"
+      ]
+    },
+    {
+      "nombre": "HIDROCLOROTIAZIDA",
+      "indicaciones": [
+        "Edemas de origen cardíaco o renal (terapia complementaria)",
+        "Hipertensión arterial (terapia única o complementaria)"
+      ],
+      "reacciones_adversas": {
+        "metabolicas": ["Hipokalemia", "Hiponatremia", "Alcalosis hipoclorémica", "Hiperglicemia", "Hiperuricemia", "Hiperlipemia"],
+        "digestivas": ["Pancreatitis", "Ictericia colestática", "Náuseas", "Vómitos", "Irritación gástrica", "Sialoadenitis", "Anorexia"],
+        "cardiovasculares": ["Hipotensión ortostática"],
+        "neurologicas": ["Vértigo", "Cefalea", "Parestesias", "Contracturas musculares"],
+        "otros": ["Leucopenia", "Trombocitopenia", "Agranulocitosis", "Anemia aplástica", "Púrpura", "Urticaria", "Rash", "Fotosensibilidad", "Síndrome Stevens-Johnson"]
+      },
+      "equivalentes_comerciales": [
+        "Diclotride", "Diurace", "GENERICOS"
+      ],
+      "dosificacion": {
+        "niños": "<2 años: 12.5-37.5 mg/día en 2 dosis",
+        "adultos": {
+          "edemas": "Inicio: 25-200 mg/día; Mantenimiento: 25-100 mg/día o intermitente",
+          "hta": "Inicio: 50-100 mg/día; Mantenimiento: ajustar 25 mg después 1 semana"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicada en insuficiencia renal, hipersensibilidad a tiazidas/sulfonamidas",
+        "Vigilar balance hidroelectrolítico (K, Na, Ca), glicemia",
+        "Puede precipitar toxicidad de digitálicos y litio",
+        "Disminuye efecto hipoglicémico de sulfonilúreas"
+      ]
+    },
+    {
+      "nombre": "FUROSEMIDA",
+      "indicaciones": [
+        "Edema pulmonar (complementario)",
+        "Oliguria por insuficiencia renal aguda",
+        "Crisis hipertensiva (complementario)",
+        "Edema cerebral (complementario)"
+      ],
+      "reacciones_adversas": {
+        "metabolicas": ["Hiponatremia", "Hipokalemia", "Alcalosis hipoclorémica", "Hiperuricemia", "Hiperglicemia"],
+        "cardiovasculares": ["Hipotensión ortostática", "Arritmias", "Tromboflebitis"],
+        "sistema_nervioso_central": ["Tinnitus", "Pérdida audición", "Parestesias", "Vértigo", "Visión borrosa"],
+        "digestivas": ["Pancreatitis", "Ictericia colestática", "Anorexia"],
+        "dermatologicas": ["Reacciones hipersensibilidad"]
+      },
+      "equivalentes_comerciales": [
+        "GENERICOS", "Lasix"
+      ],
+      "dosificacion": {
+        "niños": "0.5-1.5 mg/kg IM/IV, repetir c/6 hs si necesario",
+        "adultos": "20-40 mg IM/IV en 2 min, aumentar 20 mg en intervalos 2 hs si no respuesta"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad, anuria",
+        "Alérgicos a sulfonamidas pueden ser sensibles",
+        "Administrar IV muy lentamente",
+        "Precaución en ancianos (colapso vascular, trombosis), cirrosis hepática",
+        "Potencia ototoxicidad aminoglucósidos y toxicidad digitálicos"
+      ]
+    },
+    {
+      "nombre": "CLOTRIMAZOL",
+      "indicaciones": {
+        "crema": ["Tiña pedis, cruris, corporis, versicolor", "Candidiasis cutánea"],
+        "ovulos": ["Candidiasis vulvo-vaginal", "Vaginitis por Trichomonas vaginalis"]
+      },
+      "reacciones_adversas": {
+        "piel": ["Ardor", "Eritema", "Edema", "Ampollas", "Descamación", "Prurito", "Urticaria (crema)"],
+        "vagina": ["Leve ardor", "Calambres abdominales", "Polaquiuria", "Eritema cutáneo (ovulos)"],
+        "pareja_sexual": ["Irritación peneana/uretral"]
+      },
+      "equivalentes_comerciales": [
+        "Canestén", "Clotil", "Clothfungol", "Funzal", "GENERICOS", "Gino-Lotramina", "Lotramina", "Micomax", "Micosan", "Perfungol", "Profungal", "Topimazol"
+      ],
+      "dosificacion": {
+        "crema": "Aplicar sobre lesión 2 veces/día, continuar 2 semanas después desaparición",
+        "ovulos": "Aplicar profundamente en vagina dosis única"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad",
+        "Discontinuar si irritación/sensibilización",
+        "No recomendado primer trimestre embarazo",
+        "Precaución en lactancia (desconocido paso a leche)"
+      ]
+    },
+    {
+      "nombre": "VIOLETA DE GENCIANA",
+      "indicaciones": [
+        "Candidiasis mucocutánea",
+        "Impétigo",
+        "Gingivitis ulcerativa necrosante"
+      ],
+      "reacciones_adversas": [
+        "Irritación local",
+        "Sensibilización y ulceración mucosas",
+        "Laringitis/esofagitis/traqueítis si ingestión"
+      ],
+      "equivalentes_comerciales": ["GENERICO"],
+      "dosificacion": "Aplicación tópica 2-3 veces/día x 3-5 días",
+      "precauciones_contraindicaciones": [
+        "Descontinuar si irritación/sensibilización",
+        "No usar en ulceraciones extensas, gestantes, lactantes",
+        "Precauciones en mucosa oral para evitar ingestión"
+      ]
+    },
+    {
+      "nombre": "BENZOATO DE BENCILO",
+      "indicaciones": [
+        "Acarosis (sarna)",
+        "Pediculosis capitis (piojos)",
+        "Piriasis pubis (ladillas)"
+      ],
+      "reacciones_adversas": [
+        "Irritación local moderada (especialmente genitales)",
+        "Prurito", "Eritema", "Dermatitis contacto"
+      ],
+      "equivalentes_comerciales": [
+        "Acarii", "Benzosar", "Escabitol", "GENERICOS", "Scabil"
+      ],
+      "dosificacion": {
+        "niños": "Usar diluido",
+        "adultos": "Usar sin diluir",
+        "instrucciones": [
+          "Baño con agua/jabón antes de aplicar",
+          "Frotar y remover escamas/costras",
+          "Aplicar loción en piel húmeda cuello a pies",
+          "Aplicar segunda capa después de seca",
+          "Repetir mínimo 3 días (sarna) o 24-48 hs (piojos)"
+        ]
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad previa",
+        "No aplicar en piel inflamada/lesionada",
+        "Retirar con agua/jabón si irritación"
+      ]
+    },
+    {
+      "nombre": "SULFADIAZINA DE PLATA",
+      "indicaciones": [
+        "Prevención y tratamiento de infecciones en quemaduras 2°-3° grado"
+      ],
+      "reacciones_adversas": {
+        "locales": ["Dolor", "Ardor", "Prurito", "Necrosis", "Decoloración transitoria", "Eritema multiforme"],
+        "sistemicas": ["Reacciones hematológicas, hepáticas y gastrointestinales (por absorción sistémica)"]
+      },
+      "equivalentes_comerciales": [
+        "Argentodiazina", "GENERICOS", "Silverdiazina"
+      ],
+      "dosificacion": "Aplicación tópica 1-2 veces/día en áreas quemadas (espesor 3 mm)",
+      "precauciones_contraindicaciones": [
+        "Contraindicado en gestantes a término, lactantes, prematuros, <2 meses, hipersensibilidad a sulfas",
+        "Precaución en quemaduras extensas con problemas renales/hepáticos",
+        "Puede requerir antibióticos sistémicos adicionales"
+      ]
+    },
+    {
+      "nombre": "HIDROXIDO DE ALUMINIO + HIDROXIDO DE MAGNESIO",
+      "indicaciones": [
+        "Dispepsia y esofagitis de reflujo (sintomático)",
+        "Úlcera péptica y gastritis aguda"
+      ],
+      "reacciones_adversas": [
+        "Diarrea o constipación",
+        "Síndrome leche-alcalino",
+        "Hipermagnesemia e hipofosfatemia en insuf. renal",
+        "Fatigabilidad",
+        "Pérdida peso"
+      ],
+      "equivalentes_comerciales": [
+        "Aldrox", "GENERICOS", "Maalox", "Mylanta Plus"
+      ],
+      "dosificacion": {
+        "ulcera_gastritis": "10-30 ml 1 y 3 hs post-comidas y antes acostarse x 4-6 semanas",
+        "ulcera_sangrante": "5-15 ml cada hora",
+        "dispepsia": "Corto tiempo hasta aliviar síntomas"
+      },
+      "precauciones_contraindicaciones": [
+        "Precaución en insuf. renal, HTA, ancianos, constipación severa",
+        "Alteran absorción de tetraciclinas, digoxina, indometacina, sales hierro, isoniazida, etc.",
+        "Aumentan absorción de dicumarol, pseudoefedrina, diazepam",
+        "Incrementan excreción de fármacos débilmente ácidos"
+      ]
+    },
+    {
+      "nombre": "ATROPINA",
+      "indicaciones": [
+        "Antiespasmódico digestivo/urinario",
+        "Antídoto en intoxicaciones por agentes colinérgicos",
+        "Preparación pre-operatoria (inhibe secreciones)",
+        "Bradicardia sinusal intensa"
+      ],
+      "reacciones_adversas": {
+        "sistema_nervioso_central": ["Cefalea", "Excitación", "Confusión", "Delirio", "Alucinaciones", "Coma (ancianos)"],
+        "cardiovasculares": ["Taquicardia", "Palpitaciones", "Angor"],
+        "oftalmologicas": ["Midriasis", "Visión borrosa", "Fotofobia", "Glaucoma"],
+        "digestivas": ["Sequedad boca", "Estreñimiento", "Náuseas", "Vómitos"],
+        "otros": ["Retención urinaria", "Hipertermia", "Insomnio", "Urticaria", "Reacciones anafilácticas"]
+      },
+      "equivalentes_comerciales": ["GENERICO"],
+      "dosificacion": {
+        "niños": "0.01 mg/kg hasta 0.4 mg, dosis única o c/4-6 hs",
+        "adultos": "0.5 mg dosis única o c/4-6 hs",
+        "intoxicacion_colinergica": {
+          "prueba": "Niños: 0.5 mg/kg hasta 2 mg; Adultos: 2 mg IV en 1-2 min",
+          "tratamiento": "Aumentar progresivamente hasta signos de atropinización"
+        }
+      },
+      "precauciones_contraindicaciones": [
+        "Precaución en ancianos, niños pequeños, neuropatías autonómicas, glaucoma, hipertiroidismo, asma, hipertrofia prostática",
+        "Riesgo aumentado en enfermedad renal/hepática/daño cerebral",
+        "Precaución en infarto agudo de miocardio",
+        "Potenciado por antihistamínicos, benzodiazepinas, etc.",
+        "No usar si sospecha obstrucción intestinal o íleo"
+      ]
+    },
+    {
+      "nombre": "TETRACICLINA (OFTALMICA)",
+      "indicaciones": [
+        "Infecciones oculares superficiales (blefaritis, conjuntivitis, queratitis, etc)",
+        "Profilaxis oftalmia neonatorum",
+        "Tracoma (con tetraciclina oral)"
+      ],
+      "reacciones_adversas": [
+        "Visión borrosa (local)",
+        "Reacciones hipersensibilidad local"
+      ],
+      "equivalentes_comerciales": ["Genéricos"],
+      "dosificacion": "Aplicar 1-2 veces/día pequeña cantidad en saco conjuntival",
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad a tetraciclinas",
+        "En neonatos de madres con gonorrea asociar Penicilina G"
+      ]
+    },
+    {
+      "nombre": "DEXTROMETORFANO",
+      "indicaciones": [
+        "Alivio sintomático de tos no productiva por irritaciones leves"
+      ],
+      "reacciones_adversas": [
+        "Mareos", "Somnolencia", "Náuseas", "Vómitos", "Dolor estómago"
+      ],
+      "equivalentes_comerciales": [
+        "GENERICOS", "Romilar", "Tusger"
+      ],
+      "dosificacion": {
+        "niños": {
+          "2-6_años": "2.5-5 mg c/4 hs o 7.5 mg c/6-8 hs",
+          "6-12_años": "5-10 mg c/4 hs o 15 mg c/6-8 hs"
+        },
+        "adultos": "10-20 mg c/4 hs o 30 mg c/8 hs"
+      },
+      "precauciones_contraindicaciones": [
+        "Contraindicado en hipersensibilidad",
+        "Evitar en tos con secreciones, fiebre alta, cefalea, erupciones, náuseas/vómitos",
+        "No usar en tos crónica (fumadores), asma, enfisema"
+      ]
+    },
+    {
+      "nombre": "SALBUTAMOL",
+      "indicaciones": [
+        "Tratamiento sintomático del broncoespasmo",
+        "Asma bronquial, enfisema pulmonar, bronquitis"
+      ],
+      "reacciones_adversas": {
+        "neurologicas": ["Nerviosismo", "Temor", "Hiperquinesia", "Insomnio", "Temblor", "Irritabilidad", "Cefalea"],
+        "generales": ["Debilidad", "Vértigo", "Mareos", "Palidez", "Sudoración", "Rubor"],
+        "cardiovasculares": ["Taquicardia", "Arritmias", "Alteraciones PA", "Angina", "Disnea", "Edema pulmonar"],
+        "digestivas": ["Náuseas", "Vómitos", "Pirosis", "Anorexia", "Calambres abdominales"],
+        "respiratorias": ["Angioedema", "Rash", "Broncoespasmo", "Edema orofaríngeo", "Tos", "Incremento secreciones"],
+        "genitourinarias": ["Retención urinaria (varones)"]
+      },
+      "equivalentes_comerciales": [
+        "Airex", "Airplen", "Asmafilón", "Butotal", "GENERICOS", "Interbron", "Salbutam", "Saltutol", "Ventolín"
+      ],
+      "dosificacion": {
+        "niños": {
+          "2-6_años": "0.1 mg/kg c/8 hs",
+          "6-12_años": "2 mg c/6-8 hs",
+          ">12_años": "2-4 mg c/6-8 hs"
+        },
+        "adultos": "3-4 mg c/6-8 hs"
+      },
+      "precauciones_contraindicaciones": [
+        "Seguridad en embarazo/lactancia no establecida",
+        "Precaución en hipertiroidismo, diabetes, insuf. coronaria, HTA, desórdenes convulsivos, ancianos",
+        "Contraindicado en hipersensibilidad"
+      ]
+    }
+  ]
+}

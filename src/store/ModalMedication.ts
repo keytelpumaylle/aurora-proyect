@@ -31,3 +31,18 @@ export const useModalMedication = create<Modal>()((set) => ({
     selectedProduct: null 
   })),
 }))
+
+//Modal Medicamentos Administrador
+type ModalAdmin = {
+  state: boolean;
+  selected: MedicationProduct | null;
+  open: (product: MedicationProduct) => void;
+  close: () => void;
+}
+
+export const useModalAdmin = create<ModalAdmin>()((set) => ({
+  state: false,
+  selected: null,
+  open: (product: MedicationProduct) => set({ state: true, selected: product }),
+  close: () => set({ state: false, selected: null }),
+}));

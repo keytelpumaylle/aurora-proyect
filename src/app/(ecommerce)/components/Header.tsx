@@ -54,7 +54,7 @@ export default function Header() {
               <div className="flex gap-2 items-center">
                 {/* Cart */}
                 <div
-                  className="ml-4 flow-root lg:ml-6 border-gray border-1 rounded-lg p-2"
+                  className="ml-4 flow-root lg:ml-6 border-gray border-1 rounded-lg p-2 bg-white"
                   onClick={() => setOpen(true)}
                 >
                   <a
@@ -77,7 +77,7 @@ export default function Header() {
       </header>
       
       {open && (
-        <div className="fixed top-0 right-0 w-2/8 py-6 px-4 h-screen flex-1 bg-white border-gray border-l-2">
+        <div className="fixed top-0 right-0 w-full sm:w-3/5 md:w-2/5 lg:w-1/4 py-6 px-4 h-screen flex-1 bg-white border-gray border-l-2 z-50">
           <div className="flex justify-between items-center">
             <h3 className="font-semibold">Mi carrito</h3>
             <button
