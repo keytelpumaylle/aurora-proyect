@@ -4,11 +4,13 @@ import { useChatResults } from "../hook/useChatResults"; // Ajusta la ruta segú
 import CardMedication from "./CardMedication";
 import { useEffect } from "react";
 import { registrarConsulta } from "@/api/SubmitInfo";
-
+import { Plus } from 'lucide-react';
+import CalificationButton from "@/app/(Chat)/components/CalificationButton";
+import { useCalificationModal } from "@/store/Calification";
 export default function IndicationInfo() {
   const { geminiResponse, medications, loading, dosis, sintomas } =
     useChatResults();
-  const { userData } = useModalChat();
+  const { userData, clearUserData } = useModalChat();
 
   // Generar código dinámico para la receta
   const now = new Date();
@@ -37,20 +39,43 @@ export default function IndicationInfo() {
     }
   }, []);
 
+
+  const { responseFalse,response, open } = useCalificationModal();
+
+  const handleNewConsultation = () => {
+    if(!response){
+      console.log("Te falta responder la encuesta")
+      responseFalse();
+      open();
+      return;
+    }
+
+    clearUserData();
+    sessionStorage.removeItem("chatResults");
+    sessionStorage.removeItem("userSymptoms");
+    sessionStorage.removeItem("userData");
+    window.location.reload();
+  }
+
   return (
     <div className=" px-4 sm:px-6 lg:px-8 py-6">
       {loading ? (
         <div>Cargando...</div>
       ) : (
         <>
-          <div className="grid grid-cols-1 lg:grid-cols-12 h-auto lg:h-[497px] gap-4 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 h-auto lg:h-full gap-4 overflow-hidden">
 
             {/* Sección Gemini - Scroll independiente */}
-            <div className="col-span-12 lg:col-span-9 h-full flex flex-col overflow-hidden">
+            <div className="col-span-12 lg:col-span-9 h-[600px] flex flex-col overflow-hidden">
               <div className="flex-1 overflow-y-scroll scrollbar-thin scrollbar-thumb-graylight pr-0 lg:pr-4 scrollbar-thumb-rounded-full">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4 shrink-0">
-                  Recomendaciones Médicas
-                </h2>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4 shrink-0">
+                    Recomendaciones Médicas
+                  </h2>
+                  <button onClick={handleNewConsultation} className="flex items-center gap-2 bg-graylight rounded-lg p-2 text-sm hover:cursor-pointer hover:bg-gradient-to-r hover:from-[#885BDA] hover:to-[#66D6D7] hover:text-white">
+                    <Plus size={18} strokeWidth={1.5}/>Nueva Consulta
+                  </button>
+                </div>
                 <div className="border-gray bg-graylight border-1 rounded-lg w-full lg:py-3 py-2 px-3 lg:px-6 mb-4 text-sm">
                   <p className="">
                     Nos basamos en la información proporcionada inicialmente:
@@ -108,6 +133,9 @@ export default function IndicationInfo() {
                     </ol>
                   </main>
                 </article>
+                <div className="my-4">
+                  <CalificationButton/>
+                </div>
               </div>
             </div>
 

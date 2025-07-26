@@ -16,6 +16,7 @@ type Modal = {
   open: () => void;
   close: () => void;
   setUserData: (data: UserData) => void;
+  clearUserData: () => void;
 }
 
 export const useModalChat = create<Modal>()((set) => ({
@@ -24,4 +25,5 @@ export const useModalChat = create<Modal>()((set) => ({
   open: () => set(() => ({ state: true })),
   close: () => set(() => ({ state: false })),
   setUserData: (data) => set(() => ({ userData: data })),
+  clearUserData: () => set({ userData: null }),
 }))
