@@ -68,7 +68,7 @@ export default function IndicationInfo() {
             {/* Sección Gemini - Scroll independiente */}
             <div className="col-span-12 lg:col-span-9 h-[600px] flex flex-col overflow-hidden">
               <div className="flex-1 overflow-y-scroll scrollbar-thin scrollbar-thumb-graylight pr-0 lg:pr-4 scrollbar-thumb-rounded-full">
-                <div className="flex items-center justify-between mb-4">
+                <div className="md:flex items-center justify-between mb-4">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4 shrink-0">
                     Recomendaciones Médicas
                   </h2>

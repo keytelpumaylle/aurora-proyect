@@ -40,7 +40,7 @@ export default function CalificationButton() {
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#12121250] p-2">
       <div className="bg-white w-full max-w-md md:max-w-2xl lg:max-w-3xl h-auto md:h-screen rounded-lg py-6 px-4 md:py-8 md:px-12 shadow-lg flex flex-col justify-center">
         <form onSubmit={handleSubmit}>
-          <article className="overflow-hidden flex flex-col h-auto md:h-[550px]">
+          <article className="overflow-hidden flex flex-col h-[600px] md:h-[550px]">
             <header className="mb-4 flex flex-col gap-3">
               <h3 className="font-bold text-2xl md:text-3xl">
                 Evaluación de la Experiencia de Usuario
