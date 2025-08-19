@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { chatDB } from "@/lib/db";
 
 interface Medication {
   id: number;
@@ -16,6 +17,12 @@ interface ChatResults {
   respuesta_gemini: string;
   medicamentos: Medication[];
   dosis_recomendada: Dosis[];
+  imageData?: string;
+  clasificacion?: string;
+  requiere_atencion_medica?: boolean;
+  urgencia?: string;
+  es_receta_medica?: boolean;
+  medicamentos_detectados?: string[];
 }
 
 interface Dosis {
@@ -32,9 +39,15 @@ export const useChatResults = () => {
   const [dosis, setDosis] = useState<Dosis[]>([]);
   const [loading, setLoading] = useState(true);
   const [sintomas, setSintomas] = useState<string>("");
+  const [imageData, setImageData] = useState<string | null>(null);
+  const [clasificacion, setClasificacion] = useState<string>("");
+  const [requiereAtencionMedica, setRequiereAtencionMedica] = useState<boolean>(false);
+  const [urgencia, setUrgencia] = useState<string>("");
+  const [esRecetaMedica, setEsRecetaMedica] = useState<boolean>(false);
+  const [medicamentosDetectados, setMedicamentosDetectados] = useState<string[]>([]);
 
   useEffect(() => {
-    const loadData = () => {
+    const loadData = async () => {
       const storedData = sessionStorage.getItem("chatResults");
       if (!storedData) {
         window.location.href = "/";
@@ -44,6 +57,7 @@ export const useChatResults = () => {
         const userData = sessionStorage.getItem("userData");
         const userSymptoms = sessionStorage.getItem("userSymptoms");
         const parsedData: ChatResults = JSON.parse(storedData);
+        
         if (!userData || userData === "null") {
           sessionStorage.removeItem("chatResults");
           sessionStorage.removeItem("userSymptoms");
@@ -51,10 +65,31 @@ export const useChatResults = () => {
           window.location.href = "/";
           return;
         }
+
+        // Guardar en IndexedDB para persistencia
+        try {
+          await chatDB.saveChat({
+            sintomas: userSymptoms || "",
+            userData: JSON.parse(userData),
+            respuesta_gemini: parsedData.respuesta_gemini,
+            medicamentos: parsedData.medicamentos,
+            dosis_recomendada: parsedData.dosis_recomendada || [],
+            imageData: parsedData.imageData
+          });
+        } catch (dbError) {
+          console.warn("Error saving to IndexedDB:", dbError);
+        }
+        
         setGeminiResponse(parsedData.respuesta_gemini);
         setMedications(parsedData.medicamentos);
-        setDosis(parsedData.dosis_recomendada);
+        setDosis(parsedData.dosis_recomendada || []);
         setSintomas(userSymptoms || "");
+        setImageData(parsedData.imageData || null);
+        setClasificacion(parsedData.clasificacion || "leve");
+        setRequiereAtencionMedica(parsedData.requiere_atencion_medica || false);
+        setUrgencia(parsedData.urgencia || "");
+        setEsRecetaMedica(parsedData.es_receta_medica || false);
+        setMedicamentosDetectados(parsedData.medicamentos_detectados || []);
         setLoading(false);
       } catch (error) {
         console.error("Error al parsear los datos:", error);
@@ -73,5 +108,17 @@ export const useChatResults = () => {
     return () => window.removeEventListener(STORAGE_EVENT, loadData);
   }, []);
 
-  return { geminiResponse, medications, dosis, sintomas, loading };
+  return { 
+    geminiResponse, 
+    medications, 
+    dosis, 
+    sintomas, 
+    loading, 
+    imageData, 
+    clasificacion, 
+    requiereAtencionMedica, 
+    urgencia,
+    esRecetaMedica,
+    medicamentosDetectados
+  };
 };

@@ -1,5 +1,6 @@
-import Image from "next/image";
+
 import Link from "next/link";
+import { useMedicationAvailability } from "../hook/useMedicationAvailability";
 
 interface Props {
     id: number,
@@ -13,10 +14,17 @@ interface Props {
 }
 
 export default function CardMedication(props: Props) {
+    const { isAvailable, storePrice, equivalentName } = useMedicationAvailability(props.name || "");
+    
+    // Safety checks
+    if (!props.name) {
+        return null;
+    }
+    
     return (
         <Link
   key={props.id}
-  href={`/${props.name}`}
+  href={`/${encodeURIComponent(props.name)}`}
   className="group relative block rounded-md overflow-hidden p-0.5 transition-all duration-300"
 >
   {/* Fondo degradado que aparece al hacer hover */}
@@ -24,16 +32,7 @@ export default function CardMedication(props: Props) {
 
   {/* Contenedor interno con altura fija */}
   <div className="relative bg-white rounded-md z-10 overflow-hidden flex h-2/7 items-center px-4 border-graylight border-1">
-    {/* Sección de imagen con altura proporcional */}
-    <div className="relative aspect-square">
-      <Image
-        alt={props.name}
-        src={props.imageUrl}
-        className="object-cover group-hover:scale-105 transition-transform duration-300"
-        width={60}
-        height={60}
-      />
-    </div>
+    
 
     {/* Sección de contenido con altura fija */}
     <div className="p-4 flex-1 flex flex-col">
@@ -45,9 +44,34 @@ export default function CardMedication(props: Props) {
           {props.description}
         </p>
       </div>
-      <p className="font-bold text-gray-900 mt-auto pt-2">
-        s/{props.price.toFixed(2)}
-      </p>
+      
+      {/* Información de disponibilidad y precio */}
+      <div className="mt-auto pt-2">
+        {isAvailable ? (
+          <div>
+            <p className="font-bold text-gray-900">
+              s/{storePrice?.toFixed(2)}
+            </p>
+            {equivalentName && equivalentName !== props.name && (
+              <p className="text-xs text-green-600">
+                Disponible como: {equivalentName}
+              </p>
+            )}
+            <p className="text-xs text-green-600 font-medium">
+              ✓ Disponible en tienda
+            </p>
+          </div>
+        ) : (
+          <div>
+            <p className="font-semibold text-gray-900">
+              {props.name}
+            </p>
+            <p className="text-xs text-red-500 font-medium">
+              No disponible en la tienda de Aura
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   </div>
 </Link>

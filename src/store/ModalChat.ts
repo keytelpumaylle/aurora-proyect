@@ -2,7 +2,7 @@
 import { create } from 'zustand'
 
 // Definimos el tipo para los datos del usuario
-type UserData = {
+export type UserData = {
   id:string;
   edad: string;
   peso: string;
