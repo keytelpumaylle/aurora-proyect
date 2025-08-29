@@ -61,7 +61,7 @@ export default function ModalInfoUser() {
         <div className="bg-white rounded-lg max-h-[90vh] w-full max-w-md mx-auto relative overflow-auto">
           <form onSubmit={handleSubmit} className="p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              ¡Bienvenido a Aura!
+              ¡Bienvenido!
             </h2>
             
             <div className="pb-4 text-gray-600">

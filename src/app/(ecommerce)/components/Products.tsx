@@ -22,7 +22,7 @@ interface Products{
             <div className="bg-white pt-4 mb-30">
                 <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-                        Respuestas claras para tus malestares impulsado por Aura
+                        Respuestas claras para tus malestares impulsado por Siria
                     </h2>
                     <p>No hay productos disponibles en este momento.</p>
                 </div>
@@ -33,7 +33,7 @@ interface Products{
     return (
       <div className="bg-white pt-4 mb-30">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Respuestas claras para tus malestares impulsado por Aura</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Respuestas claras para tus malestares impulsado por Siria</h2>
   
           <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-12">
             {products.map((product:Products) => (
