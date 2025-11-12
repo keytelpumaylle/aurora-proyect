@@ -1,137 +1,144 @@
 'use server'
 
-// Interfaces para las respuestas
+// Interfaces para los productos
+export interface Product {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    stock: number | null;
+    image_url: string;
+}
+
 interface Meta {
-    status: number;
+    status: boolean;
     message: string;
 }
 
-interface SuccessResponse {
+interface Pagination {
+    page_number: number;
+    page_size: number;
+    total_pages: number;
+    total_records: number;
+}
+
+interface ProductsResponse {
     meta: Meta;
+    pagination: Pagination;
+    product: Product[];
 }
 
-interface ErrorDetail {
-    status: number;
-    type: string;
-    title: string;
-    detail: string[];
-    instance: string;
+interface ProductByIdResponse {
+    meta: Meta;
+    product: Product;
 }
 
-interface ErrorResponse {
-    error: ErrorDetail;
-}
-
-// Tipo unión para manejar ambas respuestas
-type RegistrationResponse = SuccessResponse | ErrorResponse;
-
-export async function getProducts() {
+/**
+ * Obtiene todos los productos disponibles
+ * @returns Array de productos o array vacío en caso de error
+ */
+export async function getProducts(): Promise<Product[]> {
     try {
-        const backUrl = process.env.BACK_URL;
-        
-        if (!backUrl) {
-            console.error('BACK_URL no está definida');
-            return [];
-        }
-        
-        const response = await fetch(`${backUrl}/api/v1/medications`, {
+        const response = await fetch(`${process.env.BACK_URL}/api/v2/products`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
-            }
+            },
+            cache: 'no-store' // Para obtener siempre datos frescos
         });
-        
+
         if (!response.ok) {
             console.error(`Error HTTP: ${response.status}`);
             return [];
         }
-        
-        const data = await response.json();
-        
-        // Verificación más robusta
-        if (data?.data?.medication && Array.isArray(data.data.medication)) {
-            return data.data.medication;
+
+        const data: ProductsResponse = await response.json();
+
+        // Verificación de la estructura de respuesta
+        if (data?.meta?.status && data?.product && Array.isArray(data.product)) {
+            return data.product;
         } else {
             console.error('Estructura de respuesta inesperada:', data);
             return [];
         }
     } catch (error) {
-        console.error('Error fetching products:', error);
-        return []; 
-    }
-}
-export async function registerProducts(
-    prevState: RegistrationResponse | undefined,
-    formData: FormData
-): Promise<RegistrationResponse> {
-    const value = {
-        name: formData.get('name') as string,
-        description: formData.get('description') as string,
-        indication: formData.get('indication') as string,
-        contraindication: formData.get('contraindication') as string,
-        dose: formData.get('dose') as string,
-        price: formData.get('price') as string,
-        imageUrl: formData.get('imageUrl') as string,
-    };
-
-    try {
-        const response = await fetch(`${process.env.BACK_URL}/api/v1/medications`, {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(value),
-        });
-
-        const data: RegistrationResponse = await response.json();
-        console.log(data);
-        return data;
-
-    } catch (error) {
-        console.error('Registration error:', error);
-        return {
-            error: {
-                status: 500,
-                type: 'https://apifarma.tryasp.net/api/v1/errors/internal-error',
-                title: 'Error interno del servidor',
-                detail: ['Ocurrió un error inesperado'],
-                instance: '/api/v1/medications'
-            }
-        };
+        console.error('Error al obtener productos:', error);
+        return [];
     }
 }
 
-export async function updateProducts(formData: FormData, id: number): Promise<RegistrationResponse> {
-    const value = {
-        name: formData.get('name') as string,
-        description: formData.get('description') as string,
-        indication: formData.get('indication') as string,
-        contraindication: formData.get('contraindication') as string,
-        dose: formData.get('dose') as string,
-        price: formData.get('price') as string,
-        imageUrl: formData.get('imageUrl') as string,
-    };
-
+/**
+ * Obtiene un producto específico por su ID
+ * @param id - ID del producto (UUID)
+ * @returns Producto o null en caso de error
+ */
+export async function GetByIdProducts(id: string): Promise<Product | null> {
     try {
-        const response = await fetch(`${process.env.BACK_URL}/api/v1/medications/${id}`, {
-            method: 'PUT',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(value),
+        const response = await fetch(`${process.env.BACK_URL}/api/v2/products/${id}`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            cache: 'no-store'
         });
 
-        const data: RegistrationResponse = await response.json();
-        console.log(data);
-        return data;
+        if (!response.ok) {
+            console.error(`Error HTTP al obtener producto ${id}: ${response.status}`);
+            return null;
+        }
 
+        const data: ProductByIdResponse = await response.json();
+
+        // Verificación de la estructura de respuesta
+        if (data?.meta?.status && data?.product) {
+            return data.product;
+        } else {
+            console.error('Estructura de respuesta inesperada para producto:', data);
+            return null;
+        }
     } catch (error) {
-        console.error('Update error:', error);
-        return {
-            error: {
-                status: 500,
-                type: 'https://apifarma.tryasp.net/api/v1/errors/internal-error',
-                title: 'Error interno del servidor',
-                detail: ['Ocurrió un error inesperado'],
-                instance: `/api/v1/medications/${id}`
-            }
-        };
+        console.error(`Error al obtener producto ${id}:`, error);
+        return null;
     }
-    
+}
+
+/**
+ * Obtiene productos con paginación
+ * @param page - Número de página (default: 1)
+ * @param pageSize - Tamaño de página (default: 25)
+ * @returns Objeto con productos y metadata de paginación
+ */
+export async function getProductsPaginated(page: number = 1, pageSize: number = 25) {
+    try {
+        const response = await fetch(
+            `${process.env.BACK_URL}/api/v2/products?page=${page}&page_size=${pageSize}`,
+            {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                cache: 'no-store'
+            }
+        );
+
+        if (!response.ok) {
+            console.error(`Error HTTP: ${response.status}`);
+            return { products: [], pagination: null };
+        }
+
+        const data: ProductsResponse = await response.json();
+
+        if (data?.meta?.status && data?.product && Array.isArray(data.product)) {
+            return {
+                products: data.product,
+                pagination: data.pagination
+            };
+        } else {
+            console.error('Estructura de respuesta inesperada:', data);
+            return { products: [], pagination: null };
+        }
+    } catch (error) {
+        console.error('Error al obtener productos paginados:', error);
+        return { products: [], pagination: null };
+    }
 }

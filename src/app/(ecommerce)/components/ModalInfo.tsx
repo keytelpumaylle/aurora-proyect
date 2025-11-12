@@ -4,7 +4,7 @@ import { useModalChat } from "@/store/ModalChat";
 import { useState } from "react";
 
 export default function ModalInfoUser() {
-  const { close, state, setUserData } = useModalChat();
+  const { close, state, setUserData, userData } = useModalChat();
   const [formData, setFormData] = useState({
     age: "",
     weight: "",
@@ -33,14 +33,19 @@ export default function ModalInfoUser() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Guardar datos en el estado global
-    setUserData({
-      id: getUUID(), // Generar un ID único
+    // Merge with existing userData to produce a complete UserData object
+    const updatedUser = {
+      id: userData?.id || getUUID(),
+      dni: userData?.dni || "",
+      name: userData?.name || "",
       edad: formData.age,
       peso: formData.weight,
       talla: formData.height,
       genero: formData.gender,
-    });
+    };
+
+    // Guardar datos en el estado global
+    setUserData(updatedUser);
     // Cerrar el modal
     close();
   };

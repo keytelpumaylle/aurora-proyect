@@ -7,11 +7,144 @@
 }
 
 @theme {
-    --color-dark: #121212;
-    --color-white: #ffffff;
-    --color-gray: #dcdcdc;
-    --color-graylight: #eaeaea;
-    --color-red: #FF4040;
-    --color-redopacity: #FF404050;
-    --color-blue: #26BBFF;
+    /* Colores Base Modernos */
+    --color-dark: #0A0A0F;
+    --color-white: #FFFFFF;
+    --color-gray: #E5E7EB;
+    --color-graylight: #F9FAFB;
+    --color-graydark: #374151;
+
+    /* Colores de Acento Futuristas */
+    --color-primary: #8B5CF6;
+    --color-primary-light: #A78BFA;
+    --color-primary-dark: #6D28D9;
+
+    --color-secondary: #06B6D4;
+    --color-secondary-light: #22D3EE;
+    --color-secondary-dark: #0891B2;
+
+    --color-accent: #EC4899;
+    --color-accent-light: #F472B6;
+
+    /* Gradientes Futuristas */
+    --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
+    --gradient-secondary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+    --gradient-dark: linear-gradient(135deg, #1E1B4B 0%, #0A0A0F 100%);
+
+    /* Colores Heredados (compatibilidad) */
+    --color-red: #EF4444;
+    --color-redopacity: #EF444450;
+    --color-blue: #3B82F6;
+}
+
+/* Animaciones suaves globales */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism utility classes */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes shrinkWidth {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-shrinkWidth {
+    animation: shrinkWidth linear;
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    background-size: 1000px 100%;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
 }

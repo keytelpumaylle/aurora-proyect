@@ -1,0 +1,14 @@
+{
+  "dni": 78965412,
+  "name": "Juan Pérez",
+  "description": "Tengo tos leve y me siento con fiebre",
+  "indication": "Diagnóstico preliminar: Gripe común (Precisión: 85%)",
+  "contraindication": "No usar si es alérgico a los componentes. Si los síntomas empeoran o no mejoran en unos días, consulte a un médico.",
+  "gemini_response": "**Diagnóstico Preliminar: Gripe común (Precisión: 85%)**\n\nBasándome en tus síntomas de tos leve y fiebre, identifico que presentas una gripe común. Este tipo de infección viral es muy común y suele resolverse por sí sola con descanso adecuado y medicación sintomática.\n\n**¿Por qué estos medicamentos?**\nEl Ibuprofeno es un antiinflamatorio no esteroideo (AINE) que ayuda a reducir la fiebre y aliviar el dolor muscular y de cabeza asociados con la gripe.\n\n**¿Cuándo mejorarás?**\nGeneralmente, los síntomas de la gripe común mejoran en 5-7 días con el tratamiento adecuado.\n\n**Señales de alarma:**\n- Fiebre superior a 39°C que no baja con medicación\n- Dificultad para respirar\n- Dolor de pecho\n- Síntomas que empeoran después de 7 días",
+  "products": [
+    {
+      "product_id": "019a7451-9914-7157-b697-540969ab0c59",
+      "dose": "400mg cada 8 horas por 5 días"
+    }
+  ]
+}

@@ -12,14 +12,21 @@ interface EditUserDataModalProps {
 export default function EditUserDataModal({ isOpen, onClose }: EditUserDataModalProps) {
   const { userData, setUserData } = useModalChat();
   
-  const [formData, setFormData] = useState({
+  type FormState = {
+    edad: string;
+    peso: string;
+    talla: string;
+    genero: string;
+  };
+
+  const [formData, setFormData] = useState<FormState>({
     edad: userData?.edad || "",
     peso: userData?.peso || "",
     talla: userData?.talla || "",
     genero: userData?.genero || ""
   });
 
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormState & { [k: string]: string }>({
     edad: "",
     peso: "",
     talla: "",
@@ -59,9 +66,15 @@ export default function EditUserDataModal({ isOpen, onClose }: EditUserDataModal
   const handleSave = () => {
     if (!validateForm()) return;
 
+    // Merge edited fields into the existing userData to produce a valid UserData
     const updatedUserData = {
       id: userData?.id || "",
-      ...formData
+      dni: userData?.dni || "",
+      name: userData?.name || "",
+      edad: formData.edad,
+      peso: formData.peso,
+      talla: formData.talla,
+      genero: formData.genero,
     };
 
     setUserData(updatedUserData);

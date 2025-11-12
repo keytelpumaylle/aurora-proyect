@@ -16,6 +16,25 @@ const nextConfig: NextConfig = {
         port: "", // Opcional, déjalo vacío si no usas un puerto específico
         pathname: "/**", // Permite todas las rutas bajo este dominio
       },
+
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+        port: "", // Opcional, déjalo vacío si no usas un puerto específico
+        pathname: "/**", // Permite todas las rutas bajo este dominio
+      },
+      {
+        protocol: "https",
+        hostname: "laboratoriosnacionales.com",
+        port: "", // Opcional, déjalo vacío si no usas un puerto específico
+        pathname: "/**", // Permite todas las rutas bajo este dominio
+      },
+      {
+        protocol: "https",
+        hostname: "www.farmaciasahumada.cl",
+        port: "", // Opcional, déjalo vacío si no usas un puerto específico
+        pathname: "/**", // Permite todas las rutas bajo este dominio
+      },
     ],
   },
 };

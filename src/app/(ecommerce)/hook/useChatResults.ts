@@ -23,6 +23,8 @@ interface ChatResults {
   urgencia?: string;
   es_receta_medica?: boolean;
   medicamentos_detectados?: string[];
+  diagnostico_preliminar?: string;
+  precision_diagnostico?: string;
 }
 
 interface Dosis {
@@ -45,6 +47,8 @@ export const useChatResults = () => {
   const [urgencia, setUrgencia] = useState<string>("");
   const [esRecetaMedica, setEsRecetaMedica] = useState<boolean>(false);
   const [medicamentosDetectados, setMedicamentosDetectados] = useState<string[]>([]);
+  const [diagnosticoPreliminar, setDiagnosticoPreliminar] = useState<string>("");
+  const [precisionDiagnostico, setPrecisionDiagnostico] = useState<string>("");
 
   useEffect(() => {
     const loadData = async () => {
@@ -90,6 +94,8 @@ export const useChatResults = () => {
         setUrgencia(parsedData.urgencia || "");
         setEsRecetaMedica(parsedData.es_receta_medica || false);
         setMedicamentosDetectados(parsedData.medicamentos_detectados || []);
+        setDiagnosticoPreliminar(parsedData.diagnostico_preliminar || "");
+        setPrecisionDiagnostico(parsedData.precision_diagnostico || "");
         setLoading(false);
       } catch (error) {
         console.error("Error al parsear los datos:", error);
@@ -108,17 +114,19 @@ export const useChatResults = () => {
     return () => window.removeEventListener(STORAGE_EVENT, loadData);
   }, []);
 
-  return { 
-    geminiResponse, 
-    medications, 
-    dosis, 
-    sintomas, 
-    loading, 
-    imageData, 
-    clasificacion, 
-    requiereAtencionMedica, 
+  return {
+    geminiResponse,
+    medications,
+    dosis,
+    sintomas,
+    loading,
+    imageData,
+    clasificacion,
+    requiereAtencionMedica,
     urgencia,
     esRecetaMedica,
-    medicamentosDetectados
+    medicamentosDetectados,
+    diagnosticoPreliminar,
+    precisionDiagnostico
   };
 };

@@ -1,5 +1,4 @@
 
-import Link from "next/link";
 import { useMedicationAvailability } from "../hook/useMedicationAvailability";
 
 interface Props {
@@ -15,65 +14,58 @@ interface Props {
 
 export default function CardMedication(props: Props) {
     const { isAvailable, storePrice, equivalentName } = useMedicationAvailability(props.name || "");
-    
-    // Safety checks
+
     if (!props.name) {
         return null;
     }
-    
+
     return (
-        <Link
-  key={props.id}
-  href={`/${encodeURIComponent(props.name)}`}
-  className="group relative block rounded-md overflow-hidden p-0.5 transition-all duration-300"
->
-  {/* Fondo degradado que aparece al hacer hover */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#885BDA] to-[#66D6D7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md z-0"></div>
+        <div className="group bg-white rounded-xl border border-primary/10 overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fadeInUp">
+            {/* Header con imagen */}
+            <div className="relative bg-gradient-to-br from-primary/5 to-secondary/5">
+                
+                {/* Badge de disponibilidad */}
+                <div className="absolute top-2 right-2">
+                    {isAvailable ? (
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-green-500 text-white shadow-sm">
+                            ✓ Disponible
+                        </span>
+                    ) : (
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-red-500 text-white shadow-sm">
+                            ✗ No disponible
+                        </span>
+                    )}
+                </div>
+            </div>
 
-  {/* Contenedor interno con altura fija */}
-  <div className="relative bg-white rounded-md z-10 overflow-hidden flex h-2/7 items-center px-4 border-graylight border-1">
-    
+            {/* Contenido */}
+            <div className="p-4 space-y-3">
+                {/* Nombre del medicamento */}
+                <h3 className="font-bold text-graydark line-clamp-2 text-sm min-h-[2.5rem]">
+                    {props.name}
+                </h3>
 
-    {/* Sección de contenido con altura fija */}
-    <div className="p-4 flex-1 flex flex-col">
-      <div className="flex-1">
-        <h3 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-2 h-6">
-          {props.name}
-        </h3>
-        <p className="mt-1 text-sm text-gray-500 line-clamp-3 h-6">
-          {props.description}
-        </p>
-      </div>
-      
-      {/* Información de disponibilidad y precio */}
-      <div className="mt-auto pt-2">
-        {isAvailable ? (
-          <div>
-            <p className="font-bold text-gray-900">
-              s/{storePrice?.toFixed(2)}
-            </p>
-            {equivalentName && equivalentName !== props.name && (
-              <p className="text-xs text-green-600">
-                Disponible como: {equivalentName}
-              </p>
-            )}
-            <p className="text-xs text-green-600 font-medium">
-              ✓ Disponible en tienda
-            </p>
-          </div>
-        ) : (
-          <div>
-            <p className="font-semibold text-gray-900">
-              {props.name}
-            </p>
-            <p className="text-xs text-red-500 font-medium">
-              No disponible en la tienda de Aura
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  </div>
-</Link>
+                {/* Dosis recomendada */}
+                <div className="bg-primary/5 rounded-lg p-2 border border-primary/10">
+                    <p className="text-xs font-semibold text-primary mb-1">💊 Dosis:</p>
+                    <p className="text-xs text-graydark">{props.dose || "Consultar con médico"}</p>
+                </div>
+
+                {/* Precio y acción */}
+                <div className="flex items-center justify-between pt-2 border-t border-gray/20">
+                    {isAvailable && storePrice ? (
+                        <div>
+                            <p className="text-lg font-bold text-dark">S/ {storePrice.toFixed(2)}</p>
+                            {equivalentName && equivalentName !== props.name && (
+                                <p className="text-xs text-green-600">→ {equivalentName}</p>
+                            )}
+                        </div>
+                    ) : (
+                        <p className="text-sm text-graydark font-medium">No disponible</p>
+                    )}
+
+                </div>
+            </div>
+        </div>
     );
 }

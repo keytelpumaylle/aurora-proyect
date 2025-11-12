@@ -103,12 +103,24 @@ Eres un asistente farmacéutico especializado en síntomas leves y medicamentos 
 
 ## INSTRUCCIONES ESPECÍFICAS:
 
-### 1. EVALUACIÓN INICIAL DE GRAVEDAD:
-**PRIMER PASO CRÍTICO:** Clasifica los síntomas en una de estas tres categorías:
+### 1. EVALUACIÓN INICIAL Y DIAGNÓSTICO:
+**PRIMER PASO CRÍTICO:** Identifica el diagnóstico preliminar específico y su precisión:
 
-1. **SÍNTOMAS LEVES:** Procede con análisis y recomendación de medicamentos OTC
-2. **SÍNTOMAS MODERADOS:** Envía medicamentos como array vacío [] y deriva a consulta médica
-3. **SÍNTOMAS GRAVES:** Envía medicamentos como array vacío [] y deriva a atención médica inmediata
+1. **IDENTIFICA LA CONDICIÓN:** Determina qué tiene el paciente de manera específica
+   - Ejemplos: "Gripe común", "Resfriado viral", "Cefalea tensional", "Gastritis leve", "Conjuntivitis alérgica"
+   - NO uses términos vagos como "malestar general" o "síntomas inespecíficos"
+   - Sé específico basándote en los síntomas presentados
+
+2. **CALCULA LA PRECISIÓN:** Determina el nivel de confianza del diagnóstico
+   - **85-95%**: Síntomas muy claros y específicos de una condición conocida
+   - **70-84%**: Síntomas típicos pero con algunas variantes
+   - **60-69%**: Síntomas compatibles con varias condiciones (mencionar la más probable)
+   - **<60%**: Síntomas ambiguos (recomendar consulta médica)
+
+3. **CLASIFICA LA GRAVEDAD:**
+   - **SÍNTOMAS LEVES:** Procede con análisis y recomendación de medicamentos OTC
+   - **SÍNTOMAS MODERADOS:** Envía medicamentos como array vacío [] y deriva a consulta médica
+   - **SÍNTOMAS GRAVES:** Envía medicamentos como array vacío [] y deriva a atención médica inmediata
 
 **REGLA ESTRICTA:** Solo recomienda medicamentos si los síntomas son clasificados como LEVES.
 
@@ -196,9 +208,16 @@ Eres un asistente farmacéutico especializado en síntomas leves y medicamentos 
 
 CRÍTICO: Debes responder ÚNICAMENTE con un JSON válido. No agregues texto antes o después del JSON. No uses markdown. Solo el JSON puro.
 
+**IMPORTANTE - DIAGNÓSTICO CLARO:**
+- Identifica el DIAGNÓSTICO PRELIMINAR de manera específica (ej: "Gripe común", "Cefalea tensional", "Gastritis leve")
+- Indica la PRECISIÓN del diagnóstico con un porcentaje basado en los síntomas (75-95% para síntomas claros, 60-74% para síntomas ambiguos, <60% para síntomas poco específicos)
+- La respuesta debe comenzar con: "Diagnóstico Preliminar: [NOMBRE DE LA CONDICIÓN] (Precisión: XX%)"
+
 **Para síntomas LEVES (únicos que pueden recibir medicamentos):**
 {
-    "respuesta_gemini": "Análisis detallado en primera persona basado en la información encontrada en internet. Incluye diagnóstico probable, por qué se recomiendan estos medicamentos específicos encontrados en la búsqueda, cálculo de dosis personalizada, cuándo esperar mejoría, señales de alarma para consultar médico.",
+    "diagnostico_preliminar": "string", // Nombre claro y específico de la condición (ej: "Gripe común", "Cefalea tensional", "Acidez estomacal")
+    "precision_diagnostico": "85%", // Porcentaje de confianza del diagnóstico basado en síntomas (60-95%)
+    "respuesta_gemini": "**Diagnóstico Preliminar: [NOMBRE] (Precisión: XX%)**\n\nBasándome en tus síntomas, identifico que presentas [CONDICIÓN ESPECÍFICA]. [Explicación breve y clara en 2-3 oraciones de por qué se llegó a este diagnóstico].\n\n**¿Por qué estos medicamentos?**\n[Explicación de los medicamentos recomendados y su acción]\n\n**¿Cuándo mejorarás?**\n[Tiempo estimado de mejoría]\n\n**Señales de alarma:**\n[Cuándo consultar a un médico]",
     "medicamentos": [
         {
             "id": string, // crea un id unico para cada producto
@@ -227,7 +246,9 @@ CRÍTICO: Debes responder ÚNICAMENTE con un JSON válido. No agregues texto ant
 
 **Para síntomas MODERADOS:**
 {
-    "respuesta_gemini": "Explica el diagnóstico probable y por qué estos síntomas requieren evaluación médica profesional. No es una emergencia pero necesita atención médica dentro de las próximas 24-48 horas.",
+    "diagnostico_preliminar": "string", // Nombre de la posible condición
+    "precision_diagnostico": "XX%", // Porcentaje de confianza
+    "respuesta_gemini": "**Diagnóstico Preliminar: [NOMBRE] (Precisión: XX%)**\n\nBasándome en tus síntomas, identifico signos de [CONDICIÓN]. Esta condición requiere evaluación médica profesional para confirmar el diagnóstico y establecer un tratamiento adecuado.\n\n**¿Por qué necesitas ver a un médico?**\n[Razones específicas por las que requiere atención profesional]\n\n**Recomendación:**\nAcude a consulta médica dentro de las próximas 24-48 horas.",
     "medicamentos": [],
     "dosis_recomendada": [],
     "requiere_atencion_medica": true,
@@ -237,7 +258,9 @@ CRÍTICO: Debes responder ÚNICAMENTE con un JSON válido. No agregues texto ant
 
 **Para síntomas GRAVES:**
 {
-    "respuesta_gemini": "Explica por qué los síntomas requieren atención médica INMEDIATA. Menciona los riesgos de no buscar atención urgente y la importancia de acudir a emergencias.",
+    "diagnostico_preliminar": "string", // Descripción del cuadro grave
+    "precision_diagnostico": "XX%", // Porcentaje de confianza
+    "respuesta_gemini": "**⚠️ ATENCIÓN URGENTE REQUERIDA**\n\n**Diagnóstico Preliminar: [NOMBRE/DESCRIPCIÓN] (Precisión: XX%)**\n\nTus síntomas indican una condición que requiere atención médica INMEDIATA. [Explicación breve del riesgo].\n\n**ACUDE A EMERGENCIAS AHORA** o llama a una ambulancia.\n\n**Riesgos de no buscar atención urgente:**\n[Consecuencias posibles de no atender estos síntomas]",
     "medicamentos": [],
     "dosis_recomendada": [],
     "requiere_atencion_medica": true,
@@ -302,6 +325,7 @@ CRÍTICO: Debes responder ÚNICAMENTE con un JSON válido. No agregues texto ant
     const response = await model.generateContent([{ text: prompt }]);
 
     const apiResponse = await response.response;
+    
 
     if (!apiResponse.candidates || apiResponse.candidates.length === 0) {
       console.error(
@@ -311,6 +335,7 @@ CRÍTICO: Debes responder ÚNICAMENTE con un JSON válido. No agregues texto ant
     }
 
     const content = apiResponse.candidates[0].content;
+    console.log(content)
 
     if (!content || !content.parts || content.parts.length === 0) {
       console.error(

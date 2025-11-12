@@ -1,15 +1,13 @@
 import { create } from 'zustand'
 
-// Tipo para el producto/medicamento
+// Tipo actualizado para el producto/medicamento (nuevo formato del backend)
 interface MedicationProduct {
-  id: number;
+  id: string;
   name: string;
   description: string;
-  indication: string;
-  contraindication: string;
-  dose: string;
   price: number;
-  imageUrl: string;
+  image_url: string;
+  stock: number | null;
 }
 
 type Modal = {
@@ -22,13 +20,13 @@ type Modal = {
 export const useModalMedication = create<Modal>()((set) => ({
   state: false,
   selectedProduct: null,
-  open: (product: MedicationProduct) => set(() => ({ 
-    state: true, 
-    selectedProduct: product 
+  open: (product: MedicationProduct) => set(() => ({
+    state: true,
+    selectedProduct: product
   })),
-  close: () => set(() => ({ 
-    state: false, 
-    selectedProduct: null 
+  close: () => set(() => ({
+    state: false,
+    selectedProduct: null
   })),
 }))
 

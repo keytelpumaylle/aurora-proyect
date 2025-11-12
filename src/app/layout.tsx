@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NotificationContainer from "@/components/NotificationContainer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Project Aura",
+  title: "Project Siria - Tu asistente de salud AI",
   description: "Tu medico personal",
 };
 
@@ -27,8 +28,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
         {children}
+
+        {/* Sistema de notificaciones global para toda la app */}
+        <NotificationContainer />
       </body>
     </html>
   );
