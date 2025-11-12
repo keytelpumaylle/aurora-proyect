@@ -78,12 +78,12 @@ export default function Header() {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-dark/40 backdrop-blur-sm z-40 animate-fadeInUp"
+            className="fixed inset-0 bg-dark/40 backdrop-blur-sm z-50 animate-fadeInUp"
             onClick={() => setOpen(false)}
           ></div>
 
           {/* Sidebar del carrito */}
-          <div className="fixed top-0 right-0 w-full sm:w-96 md:w-[400px] h-screen bg-white shadow-2xl z-50 flex flex-col animate-fadeInUp">
+          <div className="fixed top-0 right-0 w-full sm:w-96 md:w-[400px] h-screen bg-white shadow-2xl z-[200] flex flex-col animate-fadeInUp">
             {/* Header del carrito */}
             <div className="bg-gradient-to-r from-primary to-secondary p-6">
               <div className="flex justify-between items-center">
@@ -172,7 +172,7 @@ export default function Header() {
 
             {/* Footer con total y botón de pago */}
             {products.length > 0 && (
-              <div className="border-t border-gray/30 bg-white p-6 space-y-4">
+              <div className="border-t border-gray/30 bg-white p-6 pb-8 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-graydark font-medium">Total</span>
                   <span className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
